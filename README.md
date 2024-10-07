@@ -1,4 +1,3 @@
-<html lang="en">
 <header>
     <div class="header-container">
         <!-- Add your logo image here -->
