@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimension Powerwash</title>
@@ -14,8 +16,8 @@
             box-sizing: border-box;
         }
 
-        /* er styles */
-        er {
+        /* Header styles */
+        header {
             background-color: #000;
             color: #FFD700;
             padding: 20px 0;
@@ -168,6 +170,7 @@
             }
         }
     </style>
+</head>
 
 <body>
     <header>
@@ -176,6 +179,8 @@
             <h1>Dimension Powerwash</h1>
             <p>Remove the grime, and bring back the shine!</p>
         </div>
+    </header>
+
     <nav>
         <ul>
             <li><a href="#driveway-patio">Driveway & Patio Cleaning</a></li>
