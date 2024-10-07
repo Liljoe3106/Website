@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -6,8 +7,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Changed background to black */
-            color: #fff; /* Changed text color to white */
+            background-color: #000; /* Main background black */
+            color: #FFF; /* Body text white */
             box-sizing: border-box;
         }
 
@@ -132,7 +133,7 @@
         }
 
         section p {
-            color: #fff; /* Change section text to white */
+            color: #FFF; /* Change paragraph text to white */
             font-size: 1.1em;
         }
 
@@ -276,11 +277,10 @@
         }
 
         function plusSlides(n, slidesClass) {
-            const slidesContainer = document.querySelector(sl
             const slidesContainer = document.querySelector(slidesClass + ' .slides');
             const slides = slidesContainer.querySelectorAll('img');
             const totalSlides = slides.length;
-            let slideIndex = [...slides].findIndex(slide => slide.style.transform === 'translateX(0%)');
+            let slideIndex = Math.abs(parseInt(slidesContainer.style.transform.replace(/[^0-9]/g, '')) / 100) || 0;
 
             slideIndex += n;
 
