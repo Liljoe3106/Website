@@ -14,8 +14,8 @@
             box-sizing: border-box;
         }
 
-        /* Header styles */
-        header {
+        /* er styles */
+        er {
             background-color: #000;
             color: #FFD700;
             padding: 20px 0;
@@ -168,7 +168,6 @@
             }
         }
     </style>
-</head>
 
 <body>
     <header>
