@@ -1,7 +1,7 @@
-<header>
+
     <div class="header-container">
         <!-- Add your logo image here -->
-        <img src="Media/Dimension Powerwash Logo - 1.png" alt="Dimension Powerwash Logo"
+        <Dimension Powerwash Logo - 2.png" alt="Dimension Powerwash Logo"
             style="height: 300px; width: auto;">
 
         <!-- Embedded CSS -->
