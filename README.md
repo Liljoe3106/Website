@@ -3,8 +3,7 @@
 <header>
     <div class="header-container">
         <!-- Add your logo image here -->
-        <img src="DP Media/Dimension Powerwash Logo - 1.png" alt="Dimension Powerwash Logo"
-            style="height: 300px; width: auto;">
+        <img src="DP Media/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
 
         <!-- Embedded CSS -->
         <style>
