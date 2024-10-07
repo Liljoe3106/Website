@@ -63,7 +63,7 @@
         .slider {
             max-width: 100%;
             width: 100%;
-            height: 1080px; /* Square height */
+            height: 1080px; /* Square dimension */
             margin: 20px auto;
             position: relative;
             overflow: hidden;
@@ -80,7 +80,7 @@
         .slides img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Fit images within the slider */
+            object-fit: contain; /* Ensure full image is shown */
             flex-shrink: 0;
             display: block;
         }
@@ -169,6 +169,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -188,11 +189,8 @@
 
     <section id="driveway-patio">
         <h2>Driveway & Patio Cleaning</h2>
-        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.
-            <br /><br />
-            We use softwashing and low-pressure cleaning techniques to ensure your surfaces are thoroughly cleaned without damage.
-            <br /><br />
-        </p>
+        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.<br /><br />
+        We use softwashing and low-pressure cleaning techniques to ensure your surfaces are thoroughly cleaned without damage.<br /><br /></p>
 
         <!-- Slider for Driveway/Patio Cleaning -->
         <div class="slider">
@@ -207,19 +205,15 @@
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris.
-            <br /><br />
-            Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.
-            <br /><br />
-            We also offer a full gutter wash, including soffits and fascias.
-            <br /><br />
-        </p>
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris.<br /><br />
+        Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.<br /><br />
+        We also offer a full gutter wash, including soffits and facias.<br /><br /></p>
 
         <!-- Slider for Gutter Cleaning -->
         <div class="slider gutter-slider">
             <div class="slides">
                 <img src="DP Media/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP Media/Facia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP Media/Facia Cleaning.png" alt="Facia Cleaning">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
@@ -233,9 +227,7 @@
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
         <br />
-        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">
-            Follow us on Facebook!
-        </a>
+        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
     </footer>
 
     <script>
@@ -274,7 +266,7 @@
         }
 
         showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
-        showSlides('.gutter-slider .slides'); // For the Gutter Cleaning slider
+        showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
     </script>
 </body>
 </html>
