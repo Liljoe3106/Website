@@ -238,7 +238,7 @@
         <div class="slider gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Facia Cleaning.png" alt="Facia Cleaning">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
