@@ -88,7 +88,7 @@
         .slides img {
             width: 100%; 
             height: 100%; /* Set height to fill the slider */
-            object-fit: cover; /* Ensures images fill the container without distortion */
+            object-fit: contain; /* Change to 'contain' to fit the entire image */
             flex-shrink: 0; 
             display: block;
         }
@@ -270,6 +270,7 @@
 
                 slideIndex = (slideIndex + 1) % totalSlides;
 
+                setTimeout(displaySlides, 5000
                 setTimeout(displaySlides, 5000); // Change image every 5 seconds
             }
 
@@ -286,13 +287,15 @@
 
             if (slideIndex >= totalSlides) {
                 slideIndex = 0;
-           
-} else if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
 
-        slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
 
-    showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
-    showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
-</script>
-</body> </html> ```
+        showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
+        showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
+    </script>
+</body>
+</html>
