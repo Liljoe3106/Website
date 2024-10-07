@@ -3,7 +3,7 @@
 <header>
     <div class="header-container">
         <!-- Add your logo image here -->
-        <img src="Media/Dimension Powerwash Logo - 1.png" alt="Dimension Powerwash Logo"
+        <img src="DP Media/Dimension Powerwash Logo - 1.png" alt="Dimension Powerwash Logo"
             style="height: 300px; width: auto;">
 
         <!-- Embedded CSS -->
@@ -219,11 +219,8 @@
                 <!-- Moved Slider for Driveway/Patio Cleaning -->
                 <div class="slider">
                     <div class="slides">
-                        <img src="Media/drive cleaning.jpeg" alt="Driveway Cleaning">
-                        <img src="Media/before1.jpeg" alt="before1">
-                        <img src="Media/after1.jpeg" alt="After1">
-                        <img src="Media/patio.jpeg" alt="Patio">
-                        <img src="Media/block paving.jpeg" alt="block paving">
+                        <img src="DP Media/Drive Cleaning.PNG" alt="Driveway Cleaning">
+                        <img src="DP Media/Patio Cleaning.PNG" alt="Patio Cleaning">
                     </div>
                     <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
@@ -238,7 +235,7 @@
                     to flow freely.
                     <br />
                     <br />
-We also offer a full gutter wash, including soffits and facsias.
+We also offer a full gutter wash, including soffits and fascias.
                     <br />
                     <br />
                 </p>
@@ -246,9 +243,8 @@ We also offer a full gutter wash, including soffits and facsias.
                 <!-- New Slider for Gutter Cleaning -->
                 <div class="slider gutter-slider">
                     <div class="slides">
-                        <img src="Media/gutter clean.jpeg" alt="Gutter clean">
-                        <img src="Media/gutter clean zoom.jpeg" alt="Gutter zoom">
-                        <img src="Media/gutter bin.jpeg" alt="Gutter bin">
+                        <img src="DP Media/Facia Cleaning.PNG" alt="Facia Cleaning">
+                        <img src="DP Media/Free Gutter Check.PNG" alt="Free Gutter Check">
                     </div>
                     <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
                     <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
@@ -320,3 +316,5 @@ We also offer a full gutter wash, including soffits and facsias.
                 showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
                 showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
             </script>
+        </body>
+</html>
