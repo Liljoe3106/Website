@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <div class="header-container">
+        <!-- Add your logo image here -->
         <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
 
+        <!-- Embedded CSS -->
         <style>
             /* Global styles */
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #fff;
-                color: #333;
+                background-color: #fff; /* White background */
+                color: #333; /* Default text color */
                 box-sizing: border-box;
             }
 
             /* Header styles */
             header {
-                background-color: #000;
-                color: #FFD700;
+                background-color: #000; /* Black background for the header */
+                color: #FFD700; /* Yellow text color */
                 padding: 20px 0;
                 text-align: center;
             }
@@ -31,12 +33,12 @@
             .header-container p {
                 margin: 5px 0 0;
                 font-size: 1.2em;
-                color: #fff;
+                color: #fff; /* Changed subtitle color to white */
             }
 
             /* Navigation styles */
             nav {
-                background-color: #FFD700;
+                background-color: #FFD700; /* Yellow background for the navigation bar */
                 padding: 10px 0;
             }
 
@@ -54,21 +56,20 @@
 
             nav ul li a {
                 text-decoration: none;
-                color: #000;
+                color: #000; /* Black text color for navigation links */
                 font-weight: bold;
                 font-size: 1.1em;
             }
 
             /* Slider styles */
             .slider {
-                max-width: 100%;
-                width: 100%;
-                height: 500px; /* Fixed height for square slider */
+                width: 1080px; /* Set width for square slider */
+                height: 1080px; /* Set height for square slider */
                 margin: 20px auto;
                 position: relative;
                 overflow: hidden;
-                background-color: #000;
-                border: 5px solid #FFD700;
+                background-color: #000; /* Black background for the slider */
+                border: 5px solid #FFD700; /* Yellow border around the slider */
             }
 
             .slides {
@@ -79,13 +80,14 @@
 
             .slides img {
                 width: 100%;
-                height: 100%; /* Set height to 100% for square images */
+                height: 100%; /* Maintain square dimensions */
                 object-fit: cover; /* Crop images to fit the slider dimensions */
                 flex-shrink: 0;
                 display: block;
             }
 
-            .prev, .next {
+            .prev,
+            .next {
                 cursor: pointer;
                 position: absolute;
                 top: 50%;
@@ -105,7 +107,8 @@
                 border-radius: 3px 0 0 3px;
             }
 
-            .prev:hover, .next:hover {
+            .prev:hover,
+            .next:hover {
                 background-color: rgba(0, 0, 0, 0.8);
             }
 
@@ -118,20 +121,20 @@
             }
 
             section h2 {
-                color: #FFD700;
+                color: #FFD700; /* Yellow color for section titles */
                 margin-bottom: 15px;
                 font-size: 1.8em;
             }
 
             section p {
-                color: #333;
+                color: #333; /* Dark gray color for section text */
                 font-size: 1.1em;
             }
 
             /* Footer styles */
             footer {
-                background-color: #000;
-                color: #FFD700;
+                background-color: #000; /* Black background for the footer */
+                color: #FFD700; /* Yellow text color */
                 padding: 20px 0;
                 text-align: center;
                 max-width: 800px;
@@ -166,8 +169,7 @@
                 }
             }
         </style>
-    </div>
-</header>
+</head>
 
 <body>
     <header>
@@ -184,25 +186,37 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
     <section id="driveway-patio">
         <h2>Driveway & Patio Cleaning</h2>
-        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.</p>
+        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.
+            <br /><br />
+            We use softwashing and low-pressure cleaning techniques to ensure your surfaces are thoroughly
+            cleaned without damage.
+            <br /><br />
+        </p>
 
+        <!-- Slider for Driveway/Patio Cleaning -->
         <div class="slider">
             <div class="slides">
-                <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
+                <img src="DP MEDIA/Drive Cleaning.png" alt="Drive Cleaning">
                 <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
         </div>
     </section>
-
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris. Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.</p>
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris.
+            <br /><br />
+            Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater
+            to flow freely.
+            <br /><br />
+            We also offer a full gutter wash, including soffits and facias.
+            <br /><br />
+        </p>
 
+        <!-- Slider for Gutter Cleaning -->
         <div class="slider gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
@@ -212,14 +226,19 @@
             <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
         </div>
     </section>
-
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at: 0114 457 3009 / 07494 503 865</p>
+        <p>For a free quote, call Joe at:</p>
+        <p>Phone: 0114 457 3009 / 07494 503 865</p>
+        <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
-        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <br />
+        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">
+            Follow us on Facebook!
+        </a>
     </footer>
 
+    <!-- Embedded JavaScript -->
     <script>
         function showSlides(slidesClass, initialIndex = 0) {
             let slideIndex = initialIndex;
@@ -229,7 +248,9 @@
 
             function displaySlides() {
                 slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+
                 slideIndex = (slideIndex + 1) % totalSlides;
+
                 setTimeout(displaySlides, 5000); // Change image every 5 seconds
             }
 
@@ -253,8 +274,8 @@
             slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
         }
 
-        showSlides('.slider .slides');
-        showSlides('.gutter-slider .slides');
+        showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
+        showSlides('.gutter-slider .slides'); // For the Gutter Cleaning slider
     </script>
 </body>
 </html>
