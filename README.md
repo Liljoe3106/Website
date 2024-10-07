@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <style>
         /* Global styles */
@@ -7,8 +5,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
+            background-color: #000; /* Change background to black */
+            color: #fff; /* Change text color to white */
             box-sizing: border-box;
         }
 
@@ -33,7 +31,7 @@
         }
 
         nav {
-            background-color: #FFD700;
+            background-color: #000; /* Ensure nav is black */
             padding: 10px 0;
         }
 
@@ -51,7 +49,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000;
+            color: #000; /* Keep nav links black for contrast */
             font-weight: bold;
             font-size: 1.1em;
             padding: 10px 15px; /* Add padding */
@@ -133,8 +131,7 @@
         }
 
         section p {
-            color: #333;
-            font-size: 1.1em;
+            color: #fff; /* Change section text to white */
         }
 
         footer {
@@ -157,7 +154,7 @@
         }
 
         footer a {
-            color: #FFD700; /* Link color */
+            color: #FFD700; /* Keep footer links yellow for visibility */
             text-decoration: none; /* Remove underline */
         }
 
@@ -188,114 +185,3 @@
         }
     </style>
 </head>
-
-<body>
-    <header>
-        <div class="header-container">
-            <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo">
-            <h1>Dimension Powerwash</h1>
-            <p>Remove the grime, and bring back the shine!</p>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#driveway-patio">Driveway & Patio Cleaning</a></li>
-            <li><a href="#gutter-cleaning">Gutter Cleaning</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="driveway-patio">
-        <h2>Driveway & Patio Cleaning</h2>
-        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.
-            <br /><br />
-            We use softwashing and low-pressure cleaning techniques to ensure your surfaces are thoroughly
-            cleaned without damage.
-            <br /><br />
-        </p>
-
-        <div class="slider">
-            <div class="slides">
-                <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
-                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
-            </div>
-            <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
-        </div>
-    </section>
-
-    <section id="gutter-cleaning">
-        <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris.
-            <br /><br />
-            Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater
-            to flow freely.
-            <br /><br />
-            We also offer a full gutter wash, including soffits and fascias.
-            <br /><br />
-        </p>
-
-        <div class="slider gutter-slider">
-            <div class="slides">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Facia Cleaning.png" alt="Facia Cleaning">
-            </div>
-            <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at:</p>
-        <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <br />
-        <p>Or reach us on Facebook and WhatsApp.</p>
-        <br />
-        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">
-            Follow us on Facebook!
-        </a>
-    </footer>
-
-    <script>
-        function showSlides(slidesClass, initialIndex = 0) {
-            let slideIndex = initialIndex;
-            const slidesContainer = document.querySelector(slidesClass);
-            const slides = slidesContainer.querySelectorAll('img');
-            const totalSlides = slides.length;
-
-            function displaySlides() {
-                slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-                slideIndex = (slideIndex + 1) % totalSlides;
-
-                setTimeout(displaySlides, 5000
-                setTimeout(displaySlides, 5000); // Change image every 5 seconds
-            }
-
-            displaySlides();
-        }
-
-        function plusSlides(n, slidesClass) {
-            const slidesContainer = document.querySelector(slidesClass + ' .slides');
-            const slides = slidesContainer.querySelectorAll('img');
-            const totalSlides = slides.length;
-            let slideIndex = [...slides].findIndex(slide => slide.style.transform === 'translateX(0%)');
-
-            slideIndex += n;
-
-            if (slideIndex >= totalSlides) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = totalSlides - 1;
-            }
-
-            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-
-        showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
-        showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
-    </script>
-</body>
-</html>
