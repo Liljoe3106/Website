@@ -66,15 +66,15 @@
 
         /* Slider styles */
         .slider {
-            max-width: 100%;
-            width: 100%;
-            height: 1080px; /* Set fixed height for the slider */
-            margin: 20px auto;
-            position: relative;
-            overflow: hidden;
-            background-color: #000; /* Black background for the slider */
-            border: 5px solid #FFD700; /* Yellow border around the slider */
-        }
+    max-width: 100%;
+    width: 100%;
+    height: 1080px; /* Set to match square dimensions */
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #000; /* Black background for the slider */
+    border: 5px solid #FFD700; /* Yellow border around the slider */
+}
 
         .slides {
             display: flex;
