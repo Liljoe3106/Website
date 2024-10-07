@@ -176,8 +176,6 @@
             <h1>Dimension Powerwash</h1>
             <p>Remove the grime, and bring back the shine!</p>
         </div>
-    </header>
-
     <nav>
         <ul>
             <li><a href="#driveway-patio">Driveway & Patio Cleaning</a></li>
