@@ -193,11 +193,23 @@
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
                 <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
-                <img src="DP MEDIA/Facia Cleaning.png" alt="Facia Cleaning">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="gutter-cleaning">
+        <h2>Gutter Cleaning</h2>
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris. Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.</p>
+
+        <div class="slider gutter-slider">
+            <div class="slides">
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
+                <img src="DP MEDIA/Facia Cleaning.png" alt="Facia Cleaning">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
         </div>
     </section>
 
@@ -242,6 +254,7 @@
         }
 
         showSlides('.slider .slides');
+        showSlides('.gutter-slider .slides');
     </script>
 </body>
 </html>
