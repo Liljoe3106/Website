@@ -13,10 +13,16 @@
         }
 
         header {
-            background-color: #000;
+            background: linear-gradient(90deg, #000, #333);
             color: #FFD700;
             padding: 20px 0;
             text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column; /* Aligns items in a column */
+            align-items: center;    /* Centers items horizontally */
         }
 
         .header-container img {
@@ -48,14 +54,21 @@
             color: #000;
             font-weight: bold;
             font-size: 1.1em;
+            padding: 10px 15px; /* Add padding */
+            border-radius: 5px; /* Rounded corners */
+            background-color: rgba(255, 215, 0, 0.2); /* Light background for contrast */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 215, 0, 0.5); /* Darker on hover */
         }
 
         /* Slider styles */
         .slider {
-            max-width: 100%;
-            width: 100%;
-            height: 1080px; /* Set fixed height */
-            margin: 20px auto;
+            width: 100%; 
+            height: 0; /* Set height to zero */
+            padding-top: 100%; /* Maintain a square aspect ratio */
             position: relative;
             overflow: hidden;
             background-color: #000;
@@ -63,16 +76,20 @@
         }
 
         .slides {
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; /* Fill the parent */
             display: flex;
             transition: transform 0.6s ease-in-out;
-            height: 100%;
         }
 
         .slides img {
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Change to 'cover' for better fit */
-            flex-shrink: 0;
+            width: 100%; 
+            height: 100%; /* Set height to fill the slider */
+            object-fit: cover; /* Ensures images fill the container without distortion */
+            flex-shrink: 0; 
             display: block;
         }
 
@@ -99,11 +116,11 @@
 
         .prev:hover,
         .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 215, 0, 0.8); /* Yellow background on hover */
         }
 
         section {
-            padding: 20px;
+            padding: 40px 20px; /* Increased padding */
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -121,7 +138,7 @@
         }
 
         footer {
-            background-color: #000;
+            background: linear-gradient(90deg, #000, #333);
             color: #FFD700;
             padding: 20px 0;
             text-align: center;
@@ -139,6 +156,15 @@
             font-size: 1.1em;
         }
 
+        footer a {
+            color: #FFD700; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -147,6 +173,10 @@
 
             footer {
                 padding: 15px;
+            }
+
+            section h2 {
+                font-size: 1.5em; /* Slightly smaller headings */
             }
         }
 
@@ -256,15 +286,13 @@
 
             if (slideIndex >= totalSlides) {
                 slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = totalSlides - 1;
-            }
+           
+} else if (slideIndex < 0) { slideIndex = totalSlides - 1; }
 
-            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
+        slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
 
-        showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
-        showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
-    </script>
-</body>
-</html>
+    showSlides('.slider .slides'); // For the Driveway/Patio Cleaning slider
+    showSlides('.gutter-slider .slides'); // For the new Gutter Cleaning slider
+</script>
+</body> </html> ```
