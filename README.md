@@ -7,8 +7,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
+            background-color: #000; /* Changed background to black */
+            color: #fff; /* Changed text color to white */
             box-sizing: border-box;
         }
 
@@ -133,7 +133,7 @@
         }
 
         section p {
-            color: #333;
+            color: #fff; /* Change section text to white */
             font-size: 1.1em;
         }
 
@@ -270,7 +270,6 @@
 
                 slideIndex = (slideIndex + 1) % totalSlides;
 
-                setTimeout(displaySlides, 5000
                 setTimeout(displaySlides, 5000); // Change image every 5 seconds
             }
 
@@ -278,6 +277,7 @@
         }
 
         function plusSlides(n, slidesClass) {
+            const slidesContainer = document.querySelector(sl
             const slidesContainer = document.querySelector(slidesClass + ' .slides');
             const slides = slidesContainer.querySelectorAll('img');
             const totalSlides = slides.length;
