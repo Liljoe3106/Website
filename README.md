@@ -173,7 +173,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="DP Media/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
+            <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
             <h1>Dimension Powerwash</h1>
             <p>Remove the grime, and bring back the shine!</p>
         </div>
@@ -195,8 +195,8 @@
         <!-- Slider for Driveway/Patio Cleaning -->
         <div class="slider">
             <div class="slides">
-                <img src="DP Media/Drive Cleaning.png" alt="Driveway Cleaning">
-                <img src="DP Media/Patio Cleaning.png" alt="Patio Cleaning">
+                <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
+                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
@@ -212,8 +212,8 @@
         <!-- Slider for Gutter Cleaning -->
         <div class="slider gutter-slider">
             <div class="slides">
-                <img src="DP Media/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP Media/Facia Cleaning.png" alt="Facia Cleaning">
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
+                <img src="DP MEDIA/Facia Cleaning.png" alt="Facia Cleaning">
             </div>
             <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
