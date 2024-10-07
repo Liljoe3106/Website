@@ -10,33 +10,33 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* White background */
-            color: #333; /* Default text color */
+            background-color: #fff;
+            color: #333;
             box-sizing: border-box;
         }
 
         /* Header styles */
         header {
-            background-color: #000; /* Black background for the header */
-            color: #FFD700; /* Yellow text color */
+            background-color: #000;
+            color: #FFD700;
             padding: 20px 0;
             text-align: center;
         }
 
         .header-container h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         .header-container p {
             margin: 5px 0 0;
             font-size: 1.2em;
-            color: #fff; /* White subtitle color */
+            color: #fff;
         }
 
         /* Navigation styles */
         nav {
-            background-color: #FFD700; /* Yellow background for the navigation bar */
+            background-color: #FFD700;
             padding: 10px 0;
         }
 
@@ -54,43 +54,39 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000; /* Black text color for navigation links */
+            color: #000;
             font-weight: bold;
             font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #FFD700; /* Yellow hover effect */
         }
 
         /* Slider styles */
         .slider {
-    max-width: 100%;
-    width: 100%;
-    height: 1080px; /* Set to match square dimensions */
-    margin: 20px auto;
-    position: relative;
-    overflow: hidden;
-    background-color: #000; /* Black background for the slider */
-    border: 5px solid #FFD700; /* Yellow border around the slider */
-}
+            max-width: 100%;
+            width: 100%;
+            height: 1080px; /* Square height */
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+            border: 5px solid #FFD700;
+        }
 
         .slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
-            height: 100%; /* Ensure the slides fill the slider height */
+            height: 100%;
         }
 
         .slides img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Maintain aspect ratio without stretching */
+            object-fit: contain; /* Fit images within the slider */
             flex-shrink: 0;
             display: block;
         }
 
-        .prev, .next {
+        .prev,
+        .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -100,7 +96,7 @@
             color: white;
             font-weight: bold;
             font-size: 18px;
-            transition: background-color 0.6s ease;
+            transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
         }
@@ -110,15 +106,73 @@
             border-radius: 3px 0 0 3px;
         }
 
-        .prev:hover, .next:hover {
+        .prev:hover,
+        .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        /* Section styles */
+        section {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        section p {
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #FFD700;
+            padding: 20px 0;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 800px) {
+            section {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
+            <img src="DP Media/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
             <h1>Dimension Powerwash</h1>
             <p>Remove the grime, and bring back the shine!</p>
         </div>
