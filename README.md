@@ -3,7 +3,7 @@
 <header>
     <div class="header-container">
         <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo" style="height: 300px; width: auto;">
-        
+
         <style>
             /* Global styles */
             body {
@@ -63,7 +63,7 @@
             .slider {
                 max-width: 100%;
                 width: 100%;
-                height: 500px;
+                height: 500px; /* Fixed height for square slider */
                 margin: 20px auto;
                 position: relative;
                 overflow: hidden;
@@ -74,13 +74,13 @@
             .slides {
                 display: flex;
                 transition: transform 0.6s ease-in-out;
-                height: 100%;
+                height: 100%; /* Ensure the slides fill the slider height */
             }
 
             .slides img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                height: 100%; /* Set height to 100% for square images */
+                object-fit: cover; /* Crop images to fit the slider dimensions */
                 flex-shrink: 0;
                 display: block;
             }
