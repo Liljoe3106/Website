@@ -265,26 +265,27 @@
 
         function showSlides(sliderSelector) {
             const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+            const totalSlides = slides.length;
+            slideIndex = (slideIndex + 1) % totalSlides;
+
             slides.forEach((slide, index) => {
-                slide.style.display = index === slideIndex ? 'block' : 'none';
+                slide.style.transform = `translateX(${-100 * slideIndex}%)`;
             });
-            slideIndex = (slideIndex + 1) % slides.length;
-            setTimeout(() => showSlides(sliderSelector), 5000);
         }
 
         function showReviewSlides() {
             const reviewSlides = document.querySelectorAll('.review-slides div');
+            const totalReviews = reviewSlides.length;
+            reviewIndex = (reviewIndex + 1) % totalReviews;
+
             reviewSlides.forEach((slide, index) => {
-                slide.style.display = index === reviewIndex ? 'block' : 'none';
+                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
             });
-            reviewIndex = (reviewIndex + 1) % reviewSlides.length;
-            setTimeout(showReviewSlides, 5000);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            showSlides('.slider');
-            showSlides('.gutter-slider');
-            showReviewSlides();
+            setInterval(() => showSlides('.slider'), 5000);
+            setInterval(showReviewSlides, 5000);
         });
     </script>
 </body>
