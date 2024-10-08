@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -160,6 +159,11 @@
             text-decoration: underline;
         }
 
+        /* Updated star color */
+        .review-slides p strong + p {
+            color: #FFD700;
+        }
+
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -220,6 +224,10 @@
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
                     <p><strong>Sam</strong> ★★★★★</p>
+                </div>
+                <div>
+                    <p>"I had Joe round yesterday for a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, price clearly explained, excellent service, would definitely use again and highly recommend."</p>
+                    <p><strong>Morag</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
@@ -283,10 +291,11 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(() => showSlides('.slider'), 5000);
-            setInterval(showReviewSlides, 5000);
-        });
+        setInterval(() => {
+            showSlides('.slider');
+            showSlides('.gutter-slider');
+            showReviewSlides();
+        }, 5000);
     </script>
 </body>
 </html>
