@@ -92,6 +92,23 @@
             min-width: 100%;
             flex-shrink: 0;
             padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .review-slides div p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #fff;
+        }
+
+        .review-slides p strong {
+            font-size: 1.2em;
+        }
+
+        .review-slides p.stars {
+            color: #FFD700; /* Yellow stars */
+            font-size: 1.2em;
+            margin-top: 5px;
         }
 
         .prev, .next {
@@ -165,11 +182,6 @@
             text-decoration: underline;
         }
 
-        /* Updated star color */
-        .review-slides p strong + p {
-            color: #FFD700;
-        }
-
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -217,23 +229,28 @@
             <div class="review-slides">
                 <div>
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> ★★★★★</p>
+                    <p><strong>Clare</strong></p>
+                    <p class="stars">★★★★★</p>
                 </div>
                 <div>
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> ★★★★★</p>
+                    <p><strong>Peter</strong></p>
+                    <p class="stars">★★★★★</p>
                 </div>
                 <div>
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> ★★★★★</p>
+                    <p><strong>M</strong></p>
+                    <p class="stars">★★★★★</p>
                 </div>
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> ★★★★★</p>
+                    <p><strong>Sam</strong></p>
+                    <p class="stars">★★★★★</p>
                 </div>
                 <div>
                     <p>"I had Joe round yesterday for a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, price clearly explained, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong> ★★★★★</p>
+                    <p><strong>Morag</strong></p>
+                    <p class="stars">★★★★★</p>
                 </div>
             </div>
         </div>
@@ -270,19 +287,16 @@
     <footer id="contact">
         <h3>Contact Us</h3>
         <p>For a free quote, call Joe at:</p>
-        <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <br />
-        <p>Or reach us on Facebook and WhatsApp.</p>
-        <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <p>Phone: 07934 728 960</p>
+        <p>Email: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
     </footer>
 
     <script>
         let slideIndex = 0;
         let reviewIndex = 0;
 
-        function showSlides(sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides`);
+        function showSlides(className) {
+            const slides = document.querySelectorAll(className);
             slideIndex++;
             if (slideIndex >= slides[0].children.length) {
                 slideIndex = 0;
