@@ -31,6 +31,10 @@
             margin: 0 auto; /* Center the logo */
         }
 
+        .header-container p {
+            color: #fff; /* Changed slogan text color to white */
+        }
+
         nav {
             background-color: #FFD700;
             padding: 10px 0;
@@ -194,7 +198,7 @@
         <div class="header-container">
             <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo">
             <h1>Dimension Powerwash</h1>
-            <p>Remove the grime, and bring back the shine!</p>
+            <p>Remove the grime, and bring back the shine!</p> <!-- Slogan text color is now white -->
         </div>
     </header>
 
@@ -248,7 +252,7 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>Call or message us for your free quote:</p>
+        <p>For a free quote, call Joe at:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
@@ -284,9 +288,6 @@
 
             slideIndex += n;
 
-            if (slideIndex >= totalSlides) {
-                slideIndex = 0;
-            } else if (slideIndex < 0)
             if (slideIndex >= totalSlides) {
                 slideIndex = 0;
             } else if (slideIndex < 0) {
