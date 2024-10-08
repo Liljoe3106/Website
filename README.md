@@ -249,7 +249,7 @@
 
     <!-- Customer Reviews Section -->
     <section id="customer-reviews">
-        <h2>What our customers say about us</h2>
+        <h2>What Our Customers Say About Us</h2>
         <div class="review-slider">
             <div class="review-slides">
                 <div class="review">
