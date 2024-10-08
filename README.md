@@ -6,8 +6,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Changed to black */
-            color: #fff; /* Changed text color to white */
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
             box-sizing: border-box;
         }
 
@@ -132,7 +132,7 @@
         }
 
         section p {
-            color: #fff; /* Changed text color to white */
+            color: #fff; /* White text */
             font-size: 1.1em;
         }
 
@@ -153,15 +153,16 @@
         footer p {
             margin: 5px 0;
             font-size: 1.1em;
+            color: #fff; /* White text for contact section body */
         }
 
         footer a {
-            color: #FFD700; /* Link color */
-            text-decoration: none; /* Remove underline */
+            color: #FFD700; /* Yellow link */
+            text-decoration: underline; /* Underline link */
         }
 
         footer a:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline; /* Keep underline on hover */
         }
 
         /* Responsive styles */
