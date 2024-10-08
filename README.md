@@ -1,5 +1,3 @@
-Here it is:
-
 <html lang="en">
 <head>
     <style>
@@ -161,6 +159,12 @@ Here it is:
             text-decoration: underline;
         }
 
+        /* Review star styles */
+        .review-slider strong::after {
+            content: ' ★★★★★';
+            color: #FFD700; /* Set the stars to yellow */
+        }
+
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -208,19 +212,23 @@ Here it is:
             <div class="review-slides">
                 <div>
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> ★★★★★</p>
+                    <p><strong>Clare</strong></p>
                 </div>
                 <div>
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> ★★★★★</p>
+                    <p><strong>Peter</strong></p>
                 </div>
                 <div>
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> ★★★★★</p>
+                    <p><strong>M</strong></p>
                 </div>
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> ★★★★★</p>
+                    <p><strong>Sam</strong></p>
+                </div>
+                <div>
+                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
+                    <p><strong>Morag</strong></p>
                 </div>
             </div>
         </div>
