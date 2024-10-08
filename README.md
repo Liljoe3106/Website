@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -6,8 +7,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
+            background-color: #000;
+            color: #fff;
             box-sizing: border-box;
         }
 
@@ -67,36 +68,28 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
-        .slider {
+        /* Slider styles */
+        .slider, .gutter-slider, .review-slider {
             width: 100%;
-            height: 0;
-            padding-top: 100%;
-            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
             overflow: hidden;
+            position: relative;
             background-color: #000;
             border: 5px solid #FFD700;
         }
 
-        .slides {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+        .slides, .review-slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
         }
 
-        .slides img {
+        .slides img, .review-slides div {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
             flex-shrink: 0;
-            display: block;
         }
 
-        .prev,
-        .next {
+        .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -116,8 +109,7 @@
             border-radius: 3px 0 0 3px;
         }
 
-        .prev:hover,
-        .next:hover {
+        .prev:hover, .next:hover {
             background-color: rgba(255, 215, 0, 0.8);
         }
 
@@ -168,6 +160,7 @@
             text-decoration: underline;
         }
 
+        /* Responsive styles */
         @media (max-width: 800px) {
             section {
                 padding: 15px;
@@ -208,60 +201,54 @@
         </ul>
     </nav>
 
-    <!-- Customer Reviews Slider -->
     <section id="customer-reviews">
         <h2>What our customers say about us</h2>
         <div class="review-slider">
             <div class="review-slides">
-                <div class="review">
-                    <p>Clare - ★★★★★</p>
-                    <p>Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!</p>
+                <div>
+                    <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
+                    <p><strong>Clare</strong> ★★★★★</p>
                 </div>
-                <div class="review">
-                    <p>Peter - ★★★★★</p>
-                    <p>Great communication and great job done. Gutters now clear of gunk - thanks Joe!</p>
+                <div>
+                    <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
+                    <p><strong>Peter</strong> ★★★★★</p>
                 </div>
-                <div class="review">
-                    <p>M - ★★★★★</p>
-                    <p>Excellent service with a fair price! Joe cleaned our gutters, driveway and patio. I highly recommend and I will be booking in the near future!</p>
+                <div>
+                    <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
+                    <p><strong>M</strong> ★★★★★</p>
                 </div>
-                <div class="review">
-                    <p>Sam - ★★★★★</p>
-                    <p>Great service from Joe, getting my driveway clean, looks amazing thank you!</p>
+                <div>
+                    <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
+                    <p><strong>Sam</strong> ★★★★★</p>
                 </div>
             </div>
-            <a class="prev" onclick="plusReviewSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusReviewSlides(1)">&#10095;</a>
         </div>
     </section>
 
     <section id="driveway-patio">
         <h2>Driveway & Patio Cleaning</h2>
         <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.</p>
+
         <div class="slider">
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
                 <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
             </div>
-            <a class="prev" onclick="plusSlides(-1, '.slider')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, '.slider')">&#10095;</a>
         </div>
     </section>
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris. Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.</p>
-        <div class="slider gutter-slider">
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
+
+        <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
-            <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <footer id="contact">
         <h3>Contact Us</h3>
         <p>For a free quote, call Joe at:</p>
@@ -269,69 +256,29 @@
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
         <br />
-        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
     </footer>
 
     <script>
-        let reviewIndex = 0;
-
-        function showReviewSlides() {
-            const reviewSlides = document.querySelector('.review-slides');
-            const reviews = document.querySelectorAll('.review');
-            const totalReviews = reviews.length;
-
-            reviewSlides.style.transform = `translateX(-${reviewIndex * 100}%)`;
-
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-
-            setTimeout(showReviewSlides, 7000); // Change review every 7 seconds
-        }
-
-        function plusReviewSlides(n) {
-            const reviews = document.querySelectorAll('.review');
-            const
-            totalReviews = reviews.length;
-
-            reviewIndex += n;
-            if (reviewIndex >= totalReviews) {
-                reviewIndex = 0;
-            } else if (reviewIndex < 0) {
-                reviewIndex = totalReviews - 1;
-            }
-
-            const reviewSlides = document.querySelector('.review-slides');
-            reviewSlides.style.transform = `translateX(-${reviewIndex * 100}%)`;
-        }
-
         let slideIndex = 0;
+        let reviewIndex = 0;
 
         function showSlides(sliderSelector) {
             const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-
-            slides.forEach((slide, i) => {
-                slide.style.display = i === slideIndex ? 'block' : 'none';
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? 'block' : 'none';
             });
-
-            slideIndex = (slideIndex + 1) % totalSlides;
-
-            setTimeout(() => showSlides(sliderSelector), 5000); // Change image every 5 seconds
+            slideIndex = (slideIndex + 1) % slides.length;
+            setTimeout(() => showSlides(sliderSelector), 5000);
         }
 
-        function plusSlides(n, sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-
-            slideIndex += n;
-            if (slideIndex >= totalSlides) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = totalSlides - 1;
-            }
-
-            slides.forEach((slide, i) => {
-                slide.style.display = i === slideIndex ? 'block' : 'none';
+        function showReviewSlides() {
+            const reviewSlides = document.querySelectorAll('.review-slides div');
+            reviewSlides.forEach((slide, index) => {
+                slide.style.display = index === reviewIndex ? 'block' : 'none';
             });
+            reviewIndex = (reviewIndex + 1) % reviewSlides.length;
+            setTimeout(showReviewSlides, 5000);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
