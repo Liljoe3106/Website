@@ -268,7 +268,8 @@
                 <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
                         <br />
-        <p>Or call/Message Joe on:</p>
+                                <br />
+<p>Or Call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
