@@ -83,9 +83,15 @@
             transition: transform 0.6s ease-in-out;
         }
 
-        .slides img, .review-slides div {
+        .slides img {
             width: 100%;
             flex-shrink: 0;
+        }
+
+        .review-slides div {
+            min-width: 100%;
+            flex-shrink: 0;
+            text-align: center;
         }
 
         .prev, .next {
@@ -272,23 +278,17 @@
         let reviewIndex = 0;
 
         function showSlides(sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-
-            slides.forEach((slide, index) => {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides`);
+            slides.forEach(slide => {
+                slideIndex = (slideIndex + 1) % slides[0].children.length;
                 slide.style.transform = `translateX(${-100 * slideIndex}%)`;
             });
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides div');
-            const totalReviews = reviewSlides.length;
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-
-            reviewSlides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
-            });
+            const reviewSlides = document.querySelector('.review-slides');
+            reviewIndex = (reviewIndex + 1) % reviewSlides.children.length;
+            reviewSlides.style.transform = `translateX(${-100 * reviewIndex}%)`;
         }
 
         setInterval(() => {
