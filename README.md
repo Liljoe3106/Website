@@ -265,13 +265,15 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at:</p>
+                <br />
+        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a free, no obligation quote!</a>
+        <p>Or call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
         <br />
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a free, no obligation quote!</a>
+        
     </footer>
 
     <script>
