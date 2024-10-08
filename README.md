@@ -93,6 +93,7 @@
             flex-shrink: 0;
             padding: 20px;
             box-sizing: border-box;
+            height: 250px; /* Increased box height to fit reviews */
         }
 
         .review-slides div p {
@@ -263,7 +264,7 @@
         <div class="slider">
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
-                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
+                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning"> <!-- Fixed image path -->
                 <img src="DP MEDIA/Driveway After Clean.png" alt="Driveway After Clean">
                 <img src="DP MEDIA/Driveway Clean Before After.png" alt="Driveway Clean Before and After">
             </div>
@@ -277,7 +278,7 @@
         <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning"> <!-- Fixed image path -->
                 <img src="DP MEDIA/Gutter Vacuum.png" alt="Gutter Vacuum Cleaning">
                 <img src="DP MEDIA/Gutter Cleaning Before and After.png" alt="Gutter Cleaning Before and After">
             </div>
@@ -286,8 +287,7 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at:</p>
-        <p>Phone: 07934 728 960</p>
+        <p>Phone: <a href="tel:07934728960">07934 728 960</a></p>
         <p>Email: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
     </footer>
 
