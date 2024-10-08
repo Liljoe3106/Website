@@ -134,11 +134,6 @@
             margin: 10px auto 0;
         }
 
-        section p {
-            color: #fff;
-            font-size: 1.1em;
-        }
-
         footer {
             background: linear-gradient(90deg, #000, #333);
             color: #FFD700;
@@ -151,6 +146,16 @@
         footer h3 {
             margin-bottom: 10px;
             font-size: 1.5em;
+            position: relative;
+        }
+
+        footer h3::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #fff;
+            margin: 10px auto 0;
         }
 
         footer p {
@@ -286,6 +291,8 @@
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
         <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a free, no obligation quote!</a>
+        <br />
+        <p>&copy; 2024 Dimension Powerwash</p>
     </footer>
 
     <script>
@@ -320,3 +327,4 @@
     </script>
 </body>
 </html>
+
