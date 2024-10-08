@@ -91,7 +91,7 @@
         .review-slides div {
             min-width: 100%;
             flex-shrink: 0;
-            text-align: center;
+            padding: 20px;
         }
 
         .prev, .next {
@@ -247,6 +247,8 @@
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
                 <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
+                <img src="DP MEDIA/Driveway After Clean.png" alt="Driveway After Clean">
+                <img src="DP MEDIA/Driveway Clean Before After.png" alt="Driveway Clean Before and After">
             </div>
         </div>
     </section>
@@ -259,6 +261,8 @@
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP MEDIA/Gutter Vacuum.png" alt="Gutter Vacuum Cleaning">
+                <img src="DP MEDIA/Gutter Cleaning Before and After.png" alt="Gutter Cleaning Before and After">
             </div>
         </div>
     </section>
@@ -279,15 +283,21 @@
 
         function showSlides(sliderSelector) {
             const slides = document.querySelectorAll(`${sliderSelector} .slides`);
+            slideIndex++;
+            if (slideIndex >= slides[0].children.length) {
+                slideIndex = 0;
+            }
             slides.forEach(slide => {
-                slideIndex = (slideIndex + 1) % slides[0].children.length;
                 slide.style.transform = `translateX(${-100 * slideIndex}%)`;
             });
         }
 
         function showReviewSlides() {
             const reviewSlides = document.querySelector('.review-slides');
-            reviewIndex = (reviewIndex + 1) % reviewSlides.children.length;
+            reviewIndex++;
+            if (reviewIndex >= reviewSlides.children.length) {
+                reviewIndex = 0;
+            }
             reviewSlides.style.transform = `translateX(${-100 * reviewIndex}%)`;
         }
 
