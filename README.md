@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -6,8 +7,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Main background black */
-            color: #FFF; /* Body text white */
+            background-color: #000; /* Changed to black */
+            color: #fff; /* Changed text color to white */
             box-sizing: border-box;
         }
 
@@ -132,7 +133,7 @@
         }
 
         section p {
-            color: #FFF; /* Change paragraph text to white */
+            color: #fff; /* Changed text color to white */
             font-size: 1.1em;
         }
 
@@ -238,7 +239,7 @@
         <div class="slider gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning"> <!-- Updated file name -->
             </div>
             <a class="prev" onclick="plusSlides(-1, '.gutter-slider')">&#10094;</a>
             <a class="next" onclick="plusSlides(1, '.gutter-slider')">&#10095;</a>
@@ -279,10 +280,13 @@
             const slidesContainer = document.querySelector(slidesClass + ' .slides');
             const slides = slidesContainer.querySelectorAll('img');
             const totalSlides = slides.length;
-            let slideIndex = Math.abs(parseInt(slidesContainer.style.transform.replace(/[^0-9]/g, '')) / 100) || 0;
+            let slideIndex = [...slides].findIndex(slide => slide.style.transform === 'translateX(0%)');
 
             slideIndex += n;
 
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0)
             if (slideIndex >= totalSlides) {
                 slideIndex = 0;
             } else if (slideIndex < 0) {
