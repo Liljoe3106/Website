@@ -67,6 +67,44 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
+        /* Review Slider Styles */
+        .review-slides div {
+            background-color: rgba(255, 215, 0, 0.2); /* Transparent yellow background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .review-slides div:hover {
+            background-color: rgba(255, 215, 0, 0.4); /* Darker yellow on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+        }
+
+        /* Stars Styles */
+        .review-slider strong {
+            position: relative;
+            display: inline-block;
+            font-size: 1.1em;
+            color: #fff; /* Default color for the customer name */
+        }
+
+        .review-slider strong::after {
+            content: " ★★★★★";
+            color: #FFD700; /* Yellow stars */
+            font-size: 1.2em;
+            margin-left: 10px;
+            display: inline-block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Animation for stars */
+        .review-slider strong:hover::after {
+            transform: scale(1.2); /* Scale the stars slightly */
+            opacity: 0.9; /* Slight opacity change */
+        }
+
         /* Slider styles */
         .slider, .gutter-slider, .review-slider {
             width: 100%;
@@ -159,12 +197,6 @@
             text-decoration: underline;
         }
 
-        /* Review star styles */
-        .review-slider strong::after {
-            content: ' ★★★★★';
-            color: #FFD700; /* Set the stars to yellow */
-        }
-
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -212,23 +244,23 @@
             <div class="review-slides">
                 <div>
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong></p>
+                    <p><strong>Clare</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong></p>
+                    <p><strong>Peter</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong></p>
+                    <p><strong>M</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong></p>
+                    <p><strong>Sam</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong></p>
+                    <p><strong>Morag</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
@@ -260,42 +292,35 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at:</p>
-        <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <br />
-        <p>Or reach us on Facebook and WhatsApp.</p>
-        <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <p>Phone: 0114 457 3009 / 07494503865</p>
+        <p>Email: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
+        <p><a href="https://facebook.com/dimensionpowerwash">Follow us on Facebook</a></p>
     </footer>
 
     <script>
         let slideIndex = 0;
-        let reviewIndex = 0;
+        showSlides();
 
-        function showSlides(sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-
-            slides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${-100 * slideIndex}%)`;
-            });
-        }
-
-        function showReviewSlides() {
+        function showSlides() {
+            let i;
+            const slides = document.querySelectorAll('.slides img');
             const reviewSlides = document.querySelectorAll('.review-slides div');
-            const totalReviews = reviewSlides.length;
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-
-            reviewSlides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
-            });
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < reviewSlides.length; i++) {
+                reviewSlides[i].style.display = "none";  
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            if (slideIndex > reviewSlides.length) {slideIndex = 1}    
+            
+            slides[slideIndex-1].style.display = "block";  
+            reviewSlides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(() => showSlides('.slider'), 5000);
-            setInterval(showReviewSlides, 5000);
-        });
     </script>
 </body>
 </html>
