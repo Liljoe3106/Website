@@ -75,6 +75,25 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+        }
+
+        .review-slides div::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 30px;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: rgba(255, 215, 0, 0.2);
+            border-bottom: 0;
+            margin-left: -10px;
+            margin-bottom: -20px;
         }
 
         .review-slides div:hover {
@@ -84,10 +103,8 @@
 
         /* Stars Styles */
         .review-slider strong {
-            position: relative;
-            display: inline-block;
             font-size: 1.1em;
-            color: #fff; /* Default color for the customer name */
+            color: #fff;
         }
 
         .review-slider strong::after {
@@ -95,14 +112,6 @@
             color: #FFD700; /* Yellow stars */
             font-size: 1.2em;
             margin-left: 10px;
-            display: inline-block;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        /* Animation for stars */
-        .review-slider strong:hover::after {
-            transform: scale(1.2); /* Scale the stars slightly */
-            opacity: 0.9; /* Slight opacity change */
         }
 
         /* Slider styles */
@@ -244,23 +253,23 @@
             <div class="review-slides">
                 <div>
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> ★★★★★</p>
+                    <p><strong>Clare</strong></p>
                 </div>
                 <div>
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> ★★★★★</p>
+                    <p><strong>Peter</strong></p>
                 </div>
                 <div>
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> ★★★★★</p>
+                    <p><strong>M</strong></p>
                 </div>
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> ★★★★★</p>
+                    <p><strong>Sam</strong></p>
                 </div>
                 <div>
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong> ★★★★★</p>
+                    <p><strong>Morag</strong></p>
                 </div>
             </div>
         </div>
@@ -284,8 +293,8 @@
 
         <div class="gutter-slider">
             <div class="slides">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Gutter Cleaning">
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Gutter Check">
             </div>
         </div>
     </section>
