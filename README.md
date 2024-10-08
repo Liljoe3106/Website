@@ -67,53 +67,6 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
-        /* Review Slider Styles */
-        .review-slides div {
-            background-color: rgba(255, 215, 0, 0.2); /* Transparent yellow background */
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 20px;
-        }
-
-        .review-slides div::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 30px;
-            width: 0;
-            height: 0;
-            border: 20px solid transparent;
-            border-top-color: rgba(255, 215, 0, 0.2);
-            border-bottom: 0;
-            margin-left: -10px;
-            margin-bottom: -20px;
-        }
-
-        .review-slides div:hover {
-            background-color: rgba(255, 215, 0, 0.4); /* Darker yellow on hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
-        }
-
-        /* Stars Styles */
-        .review-slider strong {
-            font-size: 1.1em;
-            color: #fff;
-        }
-
-        .review-slider strong::after {
-            content: " ★★★★★";
-            color: #FFD700; /* Yellow stars */
-            font-size: 1.2em;
-            margin-left: 10px;
-        }
-
         /* Slider styles */
         .slider, .gutter-slider, .review-slider {
             width: 100%;
@@ -122,7 +75,7 @@
             overflow: hidden;
             position: relative;
             background-color: #000;
-            /* Removed outline */
+            border: none; /* Removed yellow box outline */
         }
 
         .slides, .review-slides {
@@ -206,6 +159,17 @@
             text-decoration: underline;
         }
 
+        /* Review bubble styles */
+        .review-bubble {
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px auto;
+            position: relative;
+            max-width: 80%; /* Prevents it from taking too much space */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -251,25 +215,25 @@
         <h2>What our customers say about us</h2>
         <div class="review-slider">
             <div class="review-slides">
-                <div>
+                <div class="review-bubble">
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong></p>
+                    <p><strong>Clare</strong> ★★★★★</p>
                 </div>
-                <div>
+                <div class="review-bubble">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong></p>
+                    <p><strong>Peter</strong> ★★★★★</p>
                 </div>
-                <div>
+                <div class="review-bubble">
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong></p>
+                    <p><strong>M</strong> ★★★★★</p>
                 </div>
-                <div>
+                <div class="review-bubble">
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong></p>
+                    <p><strong>Sam</strong> ★★★★★</p>
                 </div>
-                <div>
+                <div class="review-bubble">
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong></p>
+                    <p><strong>Morag</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
@@ -293,7 +257,7 @@
 
         <div class="gutter-slider">
             <div class="slides">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
         </div>
@@ -318,26 +282,22 @@
             const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
             const totalSlides = slides.length;
             slideIndex = (slideIndex + 1) % totalSlides;
-
-            slides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${-100 * slideIndex}%)`;
-            });
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].style.display = (i === slideIndex) ? "block" : "none";
+            }
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides div');
+            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
             const totalReviews = reviewSlides.length;
             reviewIndex = (reviewIndex + 1) % totalReviews;
-
-            reviewSlides.forEach((slide, index) => {
-                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
-            });
+            for (let i = 0; i < totalReviews; i++) {
+                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
+            }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(() => showSlides('.slider'), 5000);
-            setInterval(showReviewSlides, 5000);
-        });
+        setInterval(() => showSlides('.slider'), 3000);
+        setInterval(showReviewSlides, 5000);
     </script>
 </body>
 </html>
