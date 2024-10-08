@@ -272,7 +272,7 @@
 <p>Or Call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
-        <p>Or reach us on Facebook and WhatsApp.</p>
+        <p>Also available on Facebook or WhatsApp Facebook.</p>
         <br />
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
         
