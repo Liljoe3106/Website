@@ -122,7 +122,7 @@
             overflow: hidden;
             position: relative;
             background-color: #000;
-            border: 5px solid #FFD700;
+            /* Removed outline */
         }
 
         .slides, .review-slides {
@@ -293,43 +293,51 @@
 
         <div class="gutter-slider">
             <div class="slides">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Gutter Cleaning">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Gutter Check">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>Phone: 0114 457 3009 / 07494503865</p>
-        <p>Email: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
-        <p><a href="https://facebook.com/dimensionpowerwash">Follow us on Facebook</a></p>
+        <p>For a free quote, call Joe at:</p>
+        <p>Phone: 0114 457 3009 / 07494 503 865</p>
+        <br />
+        <p>Or reach us on Facebook and WhatsApp.</p>
+        <br />
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
+        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a free, no obligation quote!</a>
     </footer>
 
     <script>
         let slideIndex = 0;
-        showSlides();
+        let reviewIndex = 0;
 
-        function showSlides() {
-            let i;
-            const slides = document.querySelectorAll('.slides img');
-            const reviewSlides = document.querySelectorAll('.review-slides div');
-            
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < reviewSlides.length; i++) {
-                reviewSlides[i].style.display = "none";  
-            }
-            
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            if (slideIndex > reviewSlides.length) {slideIndex = 1}    
-            
-            slides[slideIndex-1].style.display = "block";  
-            reviewSlides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        function showSlides(sliderSelector) {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+            const totalSlides = slides.length;
+            slideIndex = (slideIndex + 1) % totalSlides;
+
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${-100 * slideIndex}%)`;
+            });
         }
+
+        function showReviewSlides() {
+            const reviewSlides = document.querySelectorAll('.review-slides div');
+            const totalReviews = reviewSlides.length;
+            reviewIndex = (reviewIndex + 1) % totalReviews;
+
+            reviewSlides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => showSlides('.slider'), 5000);
+            setInterval(showReviewSlides, 5000);
+        });
     </script>
 </body>
 </html>
