@@ -67,71 +67,6 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
-        /* Customer Reviews Section */
-        #customer-reviews {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        #customer-reviews h2 {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-
-        .review-slider {
-            position: relative;
-            overflow: hidden;
-            background-color: #000;
-            border: 5px solid #FFD700;
-            padding: 20px;
-        }
-
-        .review-slides {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .review {
-            min-width: 100%;
-            color: #fff;
-        }
-
-        .stars {
-            color: #FFD700; /* Yellow stars */
-            font-size: 1.2em;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            user-select: none;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(255, 215, 0, 0.8);
-        }
-
-        /* Slider styles */
         .slider {
             width: 100%;
             height: 0;
@@ -158,6 +93,32 @@
             object-fit: contain;
             flex-shrink: 0;
             display: block;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(255, 215, 0, 0.8);
         }
 
         section {
@@ -247,26 +208,26 @@
         </ul>
     </nav>
 
-    <!-- Customer Reviews Section -->
+    <!-- Customer Reviews Slider -->
     <section id="customer-reviews">
         <h2>What our customers say about us</h2>
         <div class="review-slider">
             <div class="review-slides">
                 <div class="review">
-                    <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> <span class="stars">★★★★★</span></p>
+                    <p>Clare - ★★★★★</p>
+                    <p>Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!</p>
                 </div>
                 <div class="review">
-                    <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
+                    <p>Peter - ★★★★★</p>
+                    <p>Great communication and great job done. Gutters now clear of gunk - thanks Joe!</p>
                 </div>
                 <div class="review">
-                    <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> <span class="stars">★★★★★</span></p>
+                    <p>M - ★★★★★</p>
+                    <p>Excellent service with a fair price! Joe cleaned our gutters, driveway and patio. I highly recommend and I will be booking in the near future!</p>
                 </div>
                 <div class="review">
-                    <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
+                    <p>Sam - ★★★★★</p>
+                    <p>Great service from Joe, getting my driveway clean, looks amazing thank you!</p>
                 </div>
             </div>
             <a class="prev" onclick="plusReviewSlides(-1)">&#10094;</a>
@@ -274,16 +235,9 @@
         </div>
     </section>
 
-    <!-- Driveway & Patio Cleaning Section -->
     <section id="driveway-patio">
         <h2>Driveway & Patio Cleaning</h2>
-        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.
-            <br /><br />
-            We use softwashing and low-pressure cleaning techniques to ensure your surfaces are thoroughly
-            cleaned without damage.
-            <br /><br />
-        </p>
-
+        <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.</p>
         <div class="slider">
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
@@ -294,18 +248,9 @@
         </div>
     </section>
 
-    <!-- Gutter Cleaning Section -->
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris.
-            <br /><br />
-            Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater
-            to flow freely.
-            <br /><br />
-            We also offer a full gutter wash, including soffits and fascias.
-            <br /><br />
-        </p>
-
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris. Our gutter cleaning services ensure that your gutters are free from obstructions, allowing rainwater to flow freely.</p>
         <div class="slider gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
@@ -317,13 +262,15 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us Today!</h2>
-        <p>Get your driveway, patio, gutters, and more professionally cleaned by Dimension Powerwash.</p>
-        <p>Call us at: <a href="tel:555-555-5555">555-555-5555</a></p>
-        <p>Email us at: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
-        <p>Follow us on <a href="https://www.instagram.com/">Instagram</a>!</p>
-    </section>
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>For a free quote, call Joe at:</p>
+        <p>Phone: 0114 457 3009 / 07494 503 865</p>
+        <br />
+        <p>Or reach us on Facebook and WhatsApp.</p>
+        <br />
+        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+    </footer>
 
     <script>
         let reviewIndex = 0;
@@ -342,38 +289,56 @@
 
         function plusReviewSlides(n) {
             const reviews = document.querySelectorAll('.review');
-            const totalReviews = reviews.length;
+            const
+            totalReviews = reviews.length;
 
             reviewIndex += n;
-
             if (reviewIndex >= totalReviews) {
                 reviewIndex = 0;
             } else if (reviewIndex < 0) {
                 reviewIndex = totalReviews - 1;
             }
 
-            document.querySelector('.review-slides').style.transform = `translateX(-${reviewIndex * 100}%)`;
+            const reviewSlides = document.querySelector('.review-slides');
+            reviewSlides.style.transform = `translateX(-${reviewIndex * 100}%)`;
         }
 
-        showReviewSlides();
+        let slideIndex = 0;
 
-        let currentSlideIndex = 0;
-
-        function plusSlides(n, sliderClass) {
-            const slider = document.querySelector(sliderClass + ' .slides');
-            const slides = slider.querySelectorAll('img');
+        function showSlides(sliderSelector) {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
             const totalSlides = slides.length;
 
-            currentSlideIndex += n;
+            slides.forEach((slide, i) => {
+                slide.style.display = i === slideIndex ? 'block' : 'none';
+            });
 
-            if (currentSlideIndex >= totalSlides) {
-                currentSlideIndex = 0;
-            } else if (currentSlideIndex < 0) {
-                currentSlideIndex = totalSlides - 1;
+            slideIndex = (slideIndex + 1) % totalSlides;
+
+            setTimeout(() => showSlides(sliderSelector), 5000); // Change image every 5 seconds
+        }
+
+        function plusSlides(n, sliderSelector) {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+            const totalSlides = slides.length;
+
+            slideIndex += n;
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
             }
 
-            slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            slides.forEach((slide, i) => {
+                slide.style.display = i === slideIndex ? 'block' : 'none';
+            });
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlides('.slider');
+            showSlides('.gutter-slider');
+            showReviewSlides();
+        });
     </script>
 </body>
 </html>
