@@ -249,7 +249,7 @@
 
     <!-- Customer Reviews Section -->
     <section id="customer-reviews">
-        <h2>What Our Customers Say About Us</h2>
+        <h2>What our customers say about us</h2>
         <div class="review-slider">
             <div class="review-slides">
                 <div class="review">
@@ -316,11 +316,14 @@
         </div>
     </section>
 
-    <footer>
-        <h3>Contact Dimension Powerwash</h3>
-        <p>Phone: 555-555-5555</p>
-        <p>Email: info@dimensionpowerwash.com</p>
-    </footer>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us Today!</h2>
+        <p>Get your driveway, patio, gutters, and more professionally cleaned by Dimension Powerwash.</p>
+        <p>Call us at: <a href="tel:555-555-5555">555-555-5555</a></p>
+        <p>Email us at: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
+        <p>Follow us on <a href="https://www.instagram.com/">Instagram</a>!</p>
+    </section>
 
     <script>
         let reviewIndex = 0;
