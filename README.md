@@ -75,7 +75,6 @@
             overflow: hidden;
             position: relative;
             background-color: #000;
-            border: none; /* Removed yellow box outline */
         }
 
         .slides, .review-slides {
@@ -83,7 +82,7 @@
             transition: transform 0.6s ease-in-out;
         }
 
-        .slides img, .review-slides div {
+        .slides img, .review-slides .review-bubble {
             width: 100%;
             flex-shrink: 0;
         }
@@ -123,6 +122,16 @@
             color: #FFD700;
             margin-bottom: 15px;
             font-size: 1.8em;
+            position: relative;
+        }
+
+        section h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #fff;
+            margin: 10px auto 0;
         }
 
         section p {
@@ -161,13 +170,17 @@
 
         /* Review bubble styles */
         .review-bubble {
-            background: rgba(255, 215, 0, 0.2);
+            background: rgba(255, 215, 0, 0.8);
             border-radius: 15px;
             padding: 20px;
-            margin: 10px auto;
+            margin: 20px 0;
             position: relative;
-            max-width: 80%; /* Prevents it from taking too much space */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: none; /* Hide by default, shown via JS */
+        }
+
+        .review-bubble p {
+            margin: 0;
+            font-size: 1.1em;
         }
 
         /* Responsive styles */
@@ -265,16 +278,14 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-                <br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
-                        <br />
-                                <br />
-<p>Or Call/Message Joe on:</p>
+        <p>For a free quote, call Joe at:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <p>Also available on Facebook or WhatsApp.</p>
         <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
-        
+        <p>Or reach us on Facebook and WhatsApp.</p>
+        <br />
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <br />
+        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a free, no obligation quote!</a>
     </footer>
 
     <script>
@@ -285,22 +296,27 @@
             const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
             const totalSlides = slides.length;
             slideIndex = (slideIndex + 1) % totalSlides;
-            for (let i = 0; i < totalSlides; i++) {
-                slides[i].style.display = (i === slideIndex) ? "block" : "none";
-            }
+
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${-100 * slideIndex}%)`;
+            });
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
+            const reviewSlides = document.querySelectorAll('.review-bubble');
             const totalReviews = reviewSlides.length;
             reviewIndex = (reviewIndex + 1) % totalReviews;
-            for (let i = 0; i < totalReviews; i++) {
-                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
-            }
+
+            reviewSlides.forEach((slide, index) => {
+                slide.style.display = index === reviewIndex ? 'block' : 'none';
+            });
         }
 
-        setInterval(() => showSlides('.slider'), 3000);
-        setInterval(showReviewSlides, 5000);
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => showSlides('.slider'), 5000);
+            setInterval(showReviewSlides, 5000);
+            showReviewSlides(); // Show the first review on load
+        });
     </script>
 </body>
 </html>
