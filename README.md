@@ -1,3 +1,5 @@
+Here it is:
+
 <html lang="en">
 <head>
     <style>
@@ -83,33 +85,9 @@
             transition: transform 0.6s ease-in-out;
         }
 
-        .slides img {
+        .slides img, .review-slides div {
             width: 100%;
             flex-shrink: 0;
-        }
-
-        .review-slides div {
-            min-width: 100%;
-            flex-shrink: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            height: 250px; /* Increased box height to fit reviews */
-        }
-
-        .review-slides div p {
-            font-size: 1.1em;
-            line-height: 1.5;
-            color: #fff;
-        }
-
-        .review-slides p strong {
-            font-size: 1.2em;
-        }
-
-        .review-slides p.stars {
-            color: #FFD700; /* Yellow stars */
-            font-size: 1.2em;
-            margin-top: 5px;
         }
 
         .prev, .next {
@@ -230,28 +208,19 @@
             <div class="review-slides">
                 <div>
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong></p>
-                    <p class="stars">★★★★★</p>
+                    <p><strong>Clare</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong></p>
-                    <p class="stars">★★★★★</p>
+                    <p><strong>Peter</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong></p>
-                    <p class="stars">★★★★★</p>
+                    <p><strong>M</strong> ★★★★★</p>
                 </div>
                 <div>
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong></p>
-                    <p class="stars">★★★★★</p>
-                </div>
-                <div>
-                    <p>"I had Joe round yesterday for a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, price clearly explained, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong></p>
-                    <p class="stars">★★★★★</p>
+                    <p><strong>Sam</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
@@ -264,9 +233,7 @@
         <div class="slider">
             <div class="slides">
                 <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
-                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning"> <!-- Fixed image path -->
-                <img src="DP MEDIA/Driveway After Clean.png" alt="Driveway After Clean">
-                <img src="DP MEDIA/Driveway Clean Before After.png" alt="Driveway Clean Before and After">
+                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
             </div>
         </div>
     </section>
@@ -278,48 +245,49 @@
         <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning"> <!-- Fixed image path -->
-                <img src="DP MEDIA/Gutter Vacuum.png" alt="Gutter Vacuum Cleaning">
-                <img src="DP MEDIA/Gutter Cleaning Before and After.png" alt="Gutter Cleaning Before and After">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
         </div>
     </section>
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>Phone: <a href="tel:07934728960">07934 728 960</a></p>
-        <p>Email: <a href="mailto:info@dimensionpowerwash.com">info@dimensionpowerwash.com</a></p>
+        <p>For a free quote, call Joe at:</p>
+        <p>Phone: 0114 457 3009 / 07494 503 865</p>
+        <br />
+        <p>Or reach us on Facebook and WhatsApp.</p>
+        <br />
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
     </footer>
 
     <script>
         let slideIndex = 0;
         let reviewIndex = 0;
 
-        function showSlides(className) {
-            const slides = document.querySelectorAll(className);
-            slideIndex++;
-            if (slideIndex >= slides[0].children.length) {
-                slideIndex = 0;
-            }
-            slides.forEach(slide => {
+        function showSlides(sliderSelector) {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+            const totalSlides = slides.length;
+            slideIndex = (slideIndex + 1) % totalSlides;
+
+            slides.forEach((slide, index) => {
                 slide.style.transform = `translateX(${-100 * slideIndex}%)`;
             });
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelector('.review-slides');
-            reviewIndex++;
-            if (reviewIndex >= reviewSlides.children.length) {
-                reviewIndex = 0;
-            }
-            reviewSlides.style.transform = `translateX(${-100 * reviewIndex}%)`;
+            const reviewSlides = document.querySelectorAll('.review-slides div');
+            const totalReviews = reviewSlides.length;
+            reviewIndex = (reviewIndex + 1) % totalReviews;
+
+            reviewSlides.forEach((slide, index) => {
+                slide.style.transform = `translateX(${-100 * reviewIndex}%)`;
+            });
         }
 
-        setInterval(() => {
-            showSlides('.slider');
-            showSlides('.gutter-slider');
-            showReviewSlides();
-        }, 5000);
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(() => showSlides('.slider'), 5000);
+            setInterval(showReviewSlides, 5000);
+        });
     </script>
 </body>
 </html>
