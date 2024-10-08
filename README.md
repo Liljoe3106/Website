@@ -248,7 +248,7 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <p>For a free quote, call Joe at:</p>
+        <p>Call or message us for your free quote:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
         <p>Or reach us on Facebook and WhatsApp.</p>
