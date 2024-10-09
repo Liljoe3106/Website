@@ -168,7 +168,7 @@
             position: relative;
             max-width: 80%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 220px; /* Fixed height for consistent sizing */
+            height: 280px; /* Increased height to fit longer reviews */
             display: flex;
             justify-content: center;
             align-items: center;
