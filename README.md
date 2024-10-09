@@ -78,12 +78,13 @@
             border: none;
         }
 
-        .slides, .review-slides {
+        .slides, .gutter-slides, .review-slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
+            width: 300%;
         }
 
-        .slides img, .review-slides div {
+        .slides img, .gutter-slides img, .review-slides div {
             width: 100%;
             flex-shrink: 0;
         }
@@ -275,7 +276,7 @@
         <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
 
         <div class="gutter-slider">
-            <div class="slides">
+            <div class="gutter-slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
@@ -291,34 +292,37 @@
         <p>Or Call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
-        
+        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook</a>
     </footer>
 
     <script>
         let slideIndex = 0;
-        let reviewIndex = 0;
 
-        function showSlides(sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
+        function showSlides(sliderClass) {
+            const slides = document.querySelector(sliderClass + ' .slides');
+            const totalSlides = slides.children.length;
             slideIndex = (slideIndex + 1) % totalSlides;
-            for (let i = 0; i < totalSlides; i++) {
-                slides[i].style.display = (i === slideIndex) ? "block" : "none";
-            }
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function showGutterSlides() {
+            const slides = document.querySelector('.gutter-slider .gutter-slides');
+            const totalSlides = slides.children.length;
+            slideIndex = (slideIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            const totalReviews = reviewSlides.length;
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-            for (let i = 0; i < totalReviews; i++) {
-                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
-            }
+            const slides = document.querySelector('.review-slider .review-slides');
+            const totalSlides = slides.children.length;
+            slideIndex = (slideIndex + 1) % totalSlides;
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
         }
 
-        setInterval(() => showSlides('.slider'), 3000);
-        setInterval(showReviewSlides, 5000);
+        // Set intervals for each slider
+        setInterval(() => showSlides('.slider'), 3000);  // For Driveway & Patio Cleaning slider
+        setInterval(() => showGutterSlides(), 3000);    // For Gutter Cleaning slider
+        setInterval(() => showReviewSlides(), 3000);    // For Review slider
     </script>
 </body>
 </html>
