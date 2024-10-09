@@ -76,26 +76,28 @@
             position: relative;
             background-color: #000;
             border: none;
+            height: 400px; /* Set a consistent height for the sliders */
         }
 
         .slides, .gutter-slides, .review-slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
-            width: 300%;
+            width: 100%; /* Set the width to 100% to prevent overflow */
+            height: 100%; /* Match the parent container height */
         }
 
         .slides img, .gutter-slides img {
-            width: 100%; 
-            height: auto; /* Ensures the image keeps its aspect ratio */
+            width: 100%;
+            height: 100%; /* Adjust height to fill the container without stretching */
             flex-shrink: 0;
-            object-fit: contain; /* Makes sure the image fits without zooming */
+            object-fit: contain; /* Ensure the images are contained within the frame */
         }
 
         .review-slides .review-bubble {
             width: 90%;
             max-width: 800px;
             margin: 10px auto;
-            padding: 10px; /* Reduced padding for better text fit */
+            padding: 10px;
             text-align: center;
             flex-shrink: 0;
             background: rgba(255, 215, 0, 0.2);
@@ -181,7 +183,7 @@
             padding: 20px;
             margin: 10px auto;
             position: relative;
-            max-width: 90%; /* Increased max-width to give more space */
+            max-width: 90%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             height: auto; 
             display: flex;
@@ -191,9 +193,9 @@
         }
 
         .review-bubble p {
-            font-size: 1em; /* Ensure readable font size */
+            font-size: 1em; 
             margin: 0;
-            line-height: 1.4; /* Adjust line-height for readability */
+            line-height: 1.4; 
         }
 
         .review-bubble strong {
