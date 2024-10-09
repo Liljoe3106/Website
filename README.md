@@ -168,7 +168,7 @@
             position: relative;
             max-width: 80%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 280px; /* Increased height to fit longer reviews */
+            height: 300px; /* Increased height to fit longer reviews */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -251,7 +251,7 @@
                     <p><strong>Sam</strong></p>
                 </div>
                 <div class="review-bubble">
-                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
+                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Excellent service, would definitely use again and highly recommend."</p>
                     <p><strong>Morag</strong></p>
                 </div>
             </div>
