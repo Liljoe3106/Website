@@ -168,7 +168,7 @@
             position: relative;
             max-width: 80%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            min-height: 150px;
+            height: 220px; /* Fixed height for consistent sizing */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -290,9 +290,6 @@
                                 <br />
         <p>Or Call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <p>Also available on Facebook or WhatsApp.</
-
-p>
         <br />
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
         
