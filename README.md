@@ -80,7 +80,7 @@
 
         .slides, .review-slides {
             display: flex;
-            transition: transform 0.6s ease-in-out;
+            transition: transform 0.6s ease-in-out; /* Smooth sliding transition */
         }
 
         .slides img, .review-slides div {
@@ -284,24 +284,4 @@
 
         function showSlides(sliderSelector) {
             const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-            for (let i = 0; i < totalSlides; i++) {
-                slides[i].style.display = (i === slideIndex) ? "block" : "none";
-            }
-        }
-
-        function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            const totalReviews = reviewSlides.length;
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-            for (let i = 0; i < totalReviews; i++) {
-                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
-            }
-        }
-
-        setInterval(() => showSlides('.slider'), 3000);
-        setInterval(showReviewSlides, 5000);
-    </script>
-</body>
-</html>
+            const totalSlides
