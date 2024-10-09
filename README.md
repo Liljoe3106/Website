@@ -280,7 +280,16 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <!-- Reverted Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch to book your cleaning service or to ask any questions you might have.</p>
+        <p>Email: <a href="mailto:info@dimensionpowerwash.co.uk">info@dimensionpowerwash.co.uk</a></p>
+        <p>Phone: <a href="tel:+447123456789">+44 7123 456 789</a></p>
+        <p>Follow us on <a href="https://www.facebook.com/DimensionPowerwash" target="_blank">Facebook</a></p>
+    </section>
+
+    <footer>
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:info@dimensionpowerwash.co.uk">info@dimensionpowerwash.co.uk</a></p>
         <p>Phone: <a href="tel:+447123456789">+44 7123 456 789</a></p>
