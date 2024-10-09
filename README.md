@@ -168,7 +168,8 @@
             position: relative;
             max-width: 80%; /* Prevents it from taking too much space */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 150px; /* Set a fixed height */
+            min-height: 150px; /* Sets a minimum height but allows for growth */
+            word-wrap: break-word; /* Ensures long words or sentences break correctly */
         }
 
         /* Responsive styles */
@@ -282,26 +283,32 @@
         let slideIndex = 0;
         let reviewIndex = 0;
 
-        function showSlides(sliderSelector) {
-            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-            const totalSlides = slides.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-            for (let i = 0; i < totalSlides; i++) {
-                slides[i].style.display = (i === slideIndex) ? "block" : "none";
+        function showSlides(sliderClass, index, slidesClass) {
+            let i;
+            let slides = document.querySelectorAll(`.${sliderClass} ${slidesClass}`);
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(-${index * 100}%)`;
             }
         }
 
-        function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            const totalReviews = reviewSlides.length;
-            reviewIndex = (reviewIndex + 1) % totalReviews;
-            for (let i = 0; i < totalReviews; i++) {
-                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
-            }
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides('slider', slideIndex, '.slides img');
         }
 
-        setInterval(() => showSlides('.slider'), 3000);
-        setInterval(showReviewSlides, 5000);
+        function plusReviewSlides(n) {
+            reviewIndex += n;
+            showSlides('review-slider', reviewIndex, '.review-slides div');
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
+        document.querySelector('.next').addEventListener('click', () => plusSlides(1));
+
+        document.querySelector('.review-slider .prev').addEventListener('click', () => plusReviewSlides(-1));
+        document.querySelector('.review-slider .next').addEventListener('click', () => plusReviewSlides(1));
     </script>
 </body>
 </html>
