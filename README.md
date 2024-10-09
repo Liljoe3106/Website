@@ -172,6 +172,11 @@
             word-wrap: break-word; /* Ensures long words or sentences break correctly */
         }
 
+        /* Yellow stars for reviews */
+        .review-bubble strong {
+            color: #FFD700;
+        }
+
         /* Responsive styles */
         @media (max-width: 800px) {
             section {
@@ -275,8 +280,7 @@
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
         <p>Also available on Facebook or WhatsApp.</p>
         <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
-        
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Facebook</a>
     </footer>
 
     <script>
@@ -303,6 +307,13 @@
             reviewIndex += n;
             showSlides('review-slider', reviewIndex, '.review-slides div');
         }
+
+        function autoSwitchSlides() {
+            plusSlides(1);
+            plusReviewSlides(1);
+        }
+
+        setInterval(autoSwitchSlides, 5000); // Auto-switch slides every 5 seconds
 
         document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
         document.querySelector('.next').addEventListener('click', () => plusSlides(1));
