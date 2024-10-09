@@ -75,34 +75,17 @@
             overflow: hidden;
             position: relative;
             background-color: #000;
-            border: none;
-            height: 400px; /* Set a consistent height for the sliders */
+            border: none; /* Removed yellow box outline */
         }
 
-        .slides, .gutter-slides, .review-slides {
+        .slides, .review-slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
-            width: 100%; /* Set the width to 100% to prevent overflow */
-            height: 100%; /* Match the parent container height */
         }
 
-        .slides img, .gutter-slides img {
+        .slides img, .review-slides div {
             width: 100%;
-            height: 100%; /* Adjust height to fill the container without stretching */
             flex-shrink: 0;
-            object-fit: contain; /* Ensure the images are contained within the frame */
-        }
-
-        .review-slides .review-bubble {
-            width: 90%;
-            max-width: 800px;
-            margin: 10px auto;
-            padding: 10px;
-            text-align: center;
-            flex-shrink: 0;
-            background: rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .prev, .next {
@@ -183,29 +166,9 @@
             padding: 20px;
             margin: 10px auto;
             position: relative;
-            max-width: 90%; 
+            max-width: 80%; /* Prevents it from taking too much space */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: auto; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .review-bubble p {
-            font-size: 1em; 
-            margin: 0;
-            line-height: 1.4; 
-        }
-
-        .review-bubble strong {
-            display: block;
-            margin-top: 10px;
-        }
-
-        .review-bubble strong::after {
-            content: " ★★★★★";
-            color: #FFD700; 
+            height: 150px; /* Set a fixed height */
         }
 
         /* Responsive styles */
@@ -255,23 +218,23 @@
             <div class="review-slides">
                 <div class="review-bubble">
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong></p>
+                    <p><strong>Clare</strong> ★★★★★</p>
                 </div>
                 <div class="review-bubble">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong></p>
+                    <p><strong>Peter</strong> ★★★★★</p>
                 </div>
                 <div class="review-bubble">
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong></p>
+                    <p><strong>M</strong> ★★★★★</p>
                 </div>
                 <div class="review-bubble">
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong></p>
+                    <p><strong>Sam</strong> ★★★★★</p>
                 </div>
                 <div class="review-bubble">
-                    <p>"Joe checked our gutters, Very friendly, professional service, procedure clearly explained and camera footage provided.would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong></p>
+                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
+                    <p><strong>Morag</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
@@ -294,7 +257,7 @@
         <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
 
         <div class="gutter-slider">
-            <div class="gutter-slides">
+            <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
             </div>
@@ -303,42 +266,42 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <br />
+                <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
+                        <br />
+                                <br />
+<p>Or Call/Message Joe on:</p>
+        <p>Phone: 0114 457 3009 / 07494 503 865</p>
+        <p>Also available on Facebook or WhatsApp.</p>
         <br />
-        <br />
-        <p>Or Call/WhatsApp us at: <br /> 0114 457 3009 / 07494503865</p>
-        <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook</a>
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
+        
     </footer>
 
     <script>
         let slideIndex = 0;
+        let reviewIndex = 0;
 
-        function showSlides(sliderClass) {
-            const slides = document.querySelector(sliderClass + ' .slides');
-            const totalSlides = slides.children.length;
+        function showSlides(sliderSelector) {
+            const slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+            const totalSlides = slides.length;
             slideIndex = (slideIndex + 1) % totalSlides;
-            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-
-        function showGutterSlides() {
-            const slides = document.querySelector('.gutter-slider .gutter-slides');
-            const totalSlides = slides.children.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].style.display = (i === slideIndex) ? "block" : "none";
+            }
         }
 
         function showReviewSlides() {
-            const slides = document.querySelector('.review-slider .review-slides');
-            const totalSlides = slides.children.length;
-            slideIndex = (slideIndex + 1) % totalSlides;
-            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
+            const totalReviews = reviewSlides.length;
+            reviewIndex = (reviewIndex + 1) % totalReviews;
+            for (let i = 0; i < totalReviews; i++) {
+                reviewSlides[i].style.display = (i === reviewIndex) ? "block" : "none";
+            }
         }
 
-        // Set intervals for each slider
-        setInterval(() => showSlides('.slider'), 3000);  // For Driveway & Patio Cleaning slider
-        setInterval(() => showGutterSlides(), 3000);    // For Gutter Cleaning slider
-        setInterval(() => showReviewSlides(), 3000);    // For Review slider
+        setInterval(() => showSlides('.slider'), 3000);
+        setInterval(showReviewSlides, 5000);
     </script>
 </body>
 </html>
