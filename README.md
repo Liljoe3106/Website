@@ -165,11 +165,21 @@
             border-radius: 15px;
             padding: 20px;
             margin: 10px auto;
-            position: relative;
-            max-width: 80%; /* Prevents it from taking too much space */
+            max-width: 100%; /* Prevents it from taking too much space */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             min-height: 150px; /* Sets a minimum height but allows for growth */
             word-wrap: break-word; /* Ensures long words or sentences break correctly */
+        }
+
+        /* Ensure only one review is visible at a time */
+        .review-slider {
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .review-slides div {
+            width: 100%;
+            flex-shrink: 0;
         }
 
         /* Yellow stars for reviews */
@@ -272,15 +282,9 @@
 
     <footer id="contact">
         <h3>Contact Us</h3>
-                <br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
-                        <br />
-                                <br />
-<p>Or Call/Message Joe on:</p>
-        <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <p>Also available on Facebook or WhatsApp.</p>
-        <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Facebook</a>
+        <p>Email: <a href="mailto:info@dimensionpowerwash.co.uk">info@dimensionpowerwash.co.uk</a></p>
+        <p>Phone: <a href="tel:+447123456789">+44 7123 456 789</a></p>
+        <a href="https://www.facebook.com/DimensionPowerwash" target="_blank">Facebook</a>
     </footer>
 
     <script>
