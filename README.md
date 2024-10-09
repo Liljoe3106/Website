@@ -75,7 +75,7 @@
             overflow: hidden;
             position: relative;
             background-color: #000;
-            border: none; /* Removed yellow box outline */
+            border: none;
         }
 
         .slides, .review-slides {
@@ -166,9 +166,27 @@
             padding: 20px;
             margin: 10px auto;
             position: relative;
-            max-width: 80%; /* Prevents it from taking too much space */
+            max-width: 80%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 150px; /* Set a fixed height */
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .review-bubble p {
+            margin: 0;
+        }
+
+        .review-bubble strong {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .review-bubble strong::after {
+            content: " ★★★★★";
+            color: #FFD700; /* Yellow stars */
         }
 
         /* Responsive styles */
@@ -218,23 +236,23 @@
             <div class="review-slides">
                 <div class="review-bubble">
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> ★★★★★</p>
+                    <p><strong>Clare</strong></p>
                 </div>
                 <div class="review-bubble">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> ★★★★★</p>
+                    <p><strong>Peter</strong></p>
                 </div>
                 <div class="review-bubble">
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> ★★★★★</p>
+                    <p><strong>M</strong></p>
                 </div>
                 <div class="review-bubble">
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> ★★★★★</p>
+                    <p><strong>Sam</strong></p>
                 </div>
                 <div class="review-bubble">
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong> ★★★★★</p>
+                    <p><strong>Morag</strong></p>
                 </div>
             </div>
         </div>
@@ -270,9 +288,11 @@
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
                         <br />
                                 <br />
-<p>Or Call/Message Joe on:</p>
+        <p>Or Call/Message Joe on:</p>
         <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <p>Also available on Facebook or WhatsApp.</p>
+        <p>Also available on Facebook or WhatsApp.</
+
+p>
         <br />
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
         
