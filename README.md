@@ -86,15 +86,21 @@
 
         .slides img, .gutter-slides img {
             width: 100%; 
+            height: auto; /* Ensures the image keeps its aspect ratio */
             flex-shrink: 0;
-            object-fit: contain; /* Use contain to make images fit without cropping */
+            object-fit: contain; /* Makes sure the image fits without zooming */
         }
 
         .review-slides .review-bubble {
-            max-width: 100%;
+            width: 90%;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 10px; /* Reduced padding for better text fit */
+            text-align: center;
             flex-shrink: 0;
-            padding: 20px;
-            margin: 10px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .prev, .next {
@@ -185,7 +191,9 @@
         }
 
         .review-bubble p {
+            font-size: 1em; /* Ensure readable font size */
             margin: 0;
+            line-height: 1.4; /* Adjust line-height for readability */
         }
 
         .review-bubble strong {
