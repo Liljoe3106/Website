@@ -85,8 +85,9 @@
         }
 
         .slides img, .gutter-slides img, .review-slides div {
-            width: 100%;
+            width: 100%; /* Adjusted to make sure the content fits */
             flex-shrink: 0;
+            object-fit: cover; /* Ensures the images cover the area without being stretched */
         }
 
         .prev, .next {
@@ -169,7 +170,7 @@
             position: relative;
             max-width: 80%; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 300px; /* Increased height to fit longer reviews */
+            height: auto; /* Changed to auto to fit content */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -289,9 +290,7 @@
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
                         <br />
                                 <br />
-        <p>Or Call/Message Joe on:</p>
-        <p>Phone: 0114 457 3009 / 07494 503 865</p>
-        <br />
+        <p>Or Call/WhatsApp us at: <br /> 0114 457 3009 / 07494503865</p>
         <a href="https://www.facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook</a>
     </footer>
 
