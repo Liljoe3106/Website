@@ -70,7 +70,7 @@
         /* Slider styles */
         .slider, .gutter-slider, .review-slider {
             width: 100%;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             overflow: hidden;
             position: relative;
