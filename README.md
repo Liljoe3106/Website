@@ -168,7 +168,7 @@
             position: relative;
             max-width: 80%; /* Prevents it from taking too much space */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            height: 150px; /* Set a fixed height */
+            height: 400px; /* Set a fixed height */
         }
 
         /* Responsive styles */
