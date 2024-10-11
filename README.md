@@ -267,7 +267,7 @@
     <footer id="contact">
         <h3>Contact Us</h3>
                 <br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book your free, no obligation quote here!</a>
+        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check and no obligation quote here!</a>
                         <br />
                                 <br />
 <p>Or Call/Message Joe on:</p>
