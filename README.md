@@ -200,7 +200,7 @@
         <div class="header-container">
             <img src="DP MEDIA/logo.png" alt="Dimension Powerwash Logo">
             <h1>Dimension Powerwash</h1>
-            <p>Remove the grime, and bring back the shine!</p>
+            <p>Exterior Cleaning Specialists - Sheffield</p>
         </div>
     </header>
 
