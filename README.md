@@ -233,7 +233,7 @@
                     <p><strong>Sam</strong> ★★★★★</p>
                 </div>
                 <div class="review-bubble">
-                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Reliable, arrived as expected, excellent service, would definitely use again and highly recommend."</p>
+                    <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Would definitely use again and highly recommend."</p>
                     <p><strong>Morag</strong> ★★★★★</p>
                 </div>
             </div>
