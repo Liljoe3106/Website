@@ -1,4 +1,4 @@
-    <html lang="en">
+<html lang="en">
 <head>
     <style>
         /* Global styles */
@@ -10,10 +10,10 @@
             color: #fff;
             box-sizing: border-box;
         }
-         .stars {
+        .stars {
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
-}
+        }
 
         header {
             background: linear-gradient(90deg, #000, #333);
@@ -150,89 +150,7 @@
         footer h3 {
             margin-bottom: 10px;
             font-size: 1.5em;
-       
             transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 215, 0, 0.5);
-        }
-
-        /* Slider styles */
-        .slider, .gutter-slider, .review-slider {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            background-color: #000;
-            border: none;
-        }
-
-        .slides, .review-slides {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .slides img, .review-slides div {
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(255, 215, 0, 0.8);
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-
-        section p {
-            color: #fff;
-            font-size: 1.1em;
-        }
-
-        footer {
-            background: linear-gradient(90deg, #000, #333);
-            color: #FFD700;
-            padding: 20px 0;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        footer h3 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
         }
 
         footer p {
@@ -260,6 +178,27 @@
             max-width: 90%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             height: 275px;
+        }
+
+        /* About section styles */
+        .about-section {
+            background-color: #111;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .about-section h2 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .about-section p {
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.5;
         }
 
         /* Hidden class for slides */
@@ -300,6 +239,7 @@
         <ul>
             <li><a href="#driveway-patio">Driveway & Patio Cleaning</a></li>
             <li><a href="#gutter-cleaning">Gutter Cleaning</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -328,7 +268,7 @@
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Would definitely use again and highly recommend."</p>
                     <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                         <div class="review-bubble hidden">
+                <div class="review-bubble hidden">
                     <p>"Gave a great service cleaning our blocked gutters, the price was good and also very friendly. Would highly Recommend!"</p>
                     <p><strong>Kenneth</strong> <span class="stars">★★★★★</span></p>
                 </div>
@@ -344,60 +284,75 @@
             <div class="slides">
                 <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after" loading="lazy">
                 <img src="DP MEDIA/Patio before after.png" alt="Patio before after" loading="lazy">
-                <img src="DP MEDIA/Path before after.png" alt="Patio before after" loading="lazy">
+                <img src="DP MEDIA/Path before after.png" alt="Path before after" loading="lazy">
             </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
-
+        <p>Keep your gutters clean and prevent damage to your property with our comprehensive gutter cleaning services.</p>
+        
         <div class="gutter-slider">
             <div class="slides">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning" loading="lazy">
+                <img src="DP MEDIA/Gutters before after.png" alt="Gutters before after" loading="lazy">
+                <img src="DP MEDIA/Gutter vacuuming.png" alt="Gutter vacuuming" loading="lazy">
             </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-section">
+            <h2>About Dimension Powerwash</h2>
+            <p>At Dimension Powerwash, we are dedicated to providing top-quality exterior cleaning services to homeowners in Sheffield / Worksop and surrounding areas. We use the latest equipment and techniques to ensure your property looks its best. Whether it’s driveway and patio cleaning or gutter cleaning / clearing, we take pride in delivering exceptional results that enhance the appearance and longevity of your property.</p>
+            <p>Our commitment to customer satisfaction and our attention to detail set us apart in the industry. With Dimension Powerwash, you can trust that your property is in good hands.</p>
         </div>
     </section>
 
     <footer id="contact">
         <h3>Contact Us</h3>
-        <br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
-        <br /><br />
-        <p>Or give us a call!</p>
-        <p>Phone: 0114 457 3009</p>
-        <p>Also available on Facebook or WhatsApp.</p>
-        <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
+        <p>For a free quote, call us at:</p>
+        <p><strong>0114 457 3009</strong> or <strong>07494503865</strong></p>
+        <p><a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Book a Free Quote</a></p>
+        <p>Follow us on <a href="https://facebook.com/dimensionpowerwash" target="_blank">Facebook</a></p>
     </footer>
 
     <script>
         let slideIndex = 0;
-        let reviewIndex = 0;
-        let slides;
 
-        function cacheSlides(sliderSelector) {
-            slides = document.querySelectorAll(`${sliderSelector} .slides img`);
+        function showSlides(slideClass) {
+            const slides = document.querySelectorAll(`.${slideClass} .slides > div`);
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? 'block' : 'none';
+            });
         }
 
-        function showSlides() {
-            slides[slideIndex].classList.add('hidden');
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.remove('hidden');
+        function moveSlide(n) {
+            slideIndex += n;
+            const slider = document.querySelector('.slider') || document.querySelector('.gutter-slider');
+            const slides = slider.querySelectorAll('.slides > div');
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlides(slider.classList[0]);
         }
 
-        function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            reviewSlides[reviewIndex].classList.add('hidden');
-            reviewIndex = (reviewIndex + 1) % reviewSlides.length;
-            reviewSlides[reviewIndex].classList.remove('hidden');
-        }
+        showSlides('review-slider');
+        showSlides('slider');
+        showSlides('gutter-slider');
 
-        cacheSlides('.slider'); // Cache the slider images once
-
-        setInterval(showSlides, 3000);
-        setInterval(showReviewSlides, 5000);
+        // Set automatic transitions for the review slider
+        setInterval(() => {
+            slideIndex++;
+            const slider = document.querySelector('.review-slider');
+            const slides = slider.querySelectorAll('.review-slides > div');
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            showSlides('review-slider');
+        }, 5000); // Change slide every 5 seconds
     </script>
 </body>
+</html>
