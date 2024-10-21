@@ -10,6 +10,7 @@
             color: #fff;
             box-sizing: border-box;
         }
+
         .stars {
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
@@ -90,23 +91,57 @@
             font-size: 1.1em;
         }
 
-        /* Rest of the styles remain the same */
-        section {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 800px;
+        #about-us p strong {
+            color: #FFD700; /* Yellow color for keywords */
+        }
+
+        /* Slider styles */
+        .slider, .gutter-slider, .review-slider {
+            width: 100%;
+            max-width: 1000px;
             margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            background-color: #000;
+            border: none;
         }
 
-        section h2 {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.8em;
+        .slides, .review-slides {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
         }
 
-        section p {
-            color: #fff;
-            font-size: 1.1em;
+        .slides img, .review-slides div {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 215, 0, 0.8);
         }
 
         footer {
@@ -138,6 +173,19 @@
             text-decoration: underline;
         }
 
+        /* Review bubble styles */
+        .review-bubble {
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px auto;
+            position: relative;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            height: 275px;
+        }
+
+        /* Responsive styles */
         @media (max-width: 800px) {
             section, footer {
                 padding: 15px;
@@ -237,29 +285,32 @@
     <script>
         let slideIndex = 0;
         let reviewIndex = 0;
-        let slides;
 
-        function cacheSlides(sliderSelector) {
-            slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-        }
-
-        function showSlides() {
-            slides[slideIndex].classList.add('hidden');
+        function showSlides(sliderClass) {
+            let slides = document.querySelectorAll(`${sliderClass} .slides img`);
+            slides.forEach(slide => slide.classList.add('hidden'));
             slideIndex = (slideIndex + 1) % slides.length;
             slides[slideIndex].classList.remove('hidden');
         }
 
         function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            reviewSlides[reviewIndex].classList.add('hidden');
-            reviewIndex = (reviewIndex + 1) % reviewSlides.length;
-            reviewSlides[reviewIndex].classList.remove('hidden');
+            let reviews = document.querySelectorAll('.review-slides .review-bubble');
+            reviews.forEach(review => review.classList.add('hidden'));
+            reviewIndex = (reviewIndex + 1) % reviews.length;
+            reviews[reviewIndex].classList.remove('hidden');
         }
 
-        cacheSlides('.slider'); // Cache the slider images once
+        // Show the first slide initially
+        document.querySelectorAll('.slides img').forEach(slide => slide.classList.add('hidden'));
+        document.querySelectorAll('.slides img')[0].classList.remove('hidden');
 
-        setInterval(showSlides, 3000);
-        setInterval(showReviewSlides, 5000);
+        document.querySelectorAll('.review-bubble').forEach(review => review.classList.add('hidden'));
+        document.querySelectorAll('.review-bubble')[0].classList.remove('hidden');
+
+        // Set intervals for the sliders
+        setInterval(() => showSlides('.slider'), 3000);   // Driveway & Patio Slider
+        setInterval(() => showSlides('.gutter-slider'), 3000); // Gutter Slider
+        setInterval(showReviewSlides, 5000); // Review Slider
     </script>
 </body>
 </html>
