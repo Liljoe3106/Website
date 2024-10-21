@@ -251,7 +251,7 @@ h2, h3 {
     </section>
 
     <section id="driveway-patio">
-        <h2>Driveway & Patio Cleaning</h2>
+        <h2>Drive & Patio Cleaning</h2>
         <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.</p>
 
         <div class="slider">
