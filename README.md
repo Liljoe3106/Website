@@ -13,9 +13,6 @@
          .stars {
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
-        }
-        header:first-of-type {
-    display: none;
 }
 
 
