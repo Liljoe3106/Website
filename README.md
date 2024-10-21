@@ -16,6 +16,23 @@
             color: #fff;
             box-sizing: border-box;
         }
+        <style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    strong {
+        color: #FFD700; /* Yellow color for <strong> text */
+    }
+
+</style>
+
 
         .stars {
             color: #FFD700;
