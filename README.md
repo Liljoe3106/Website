@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,26 +8,71 @@
     <meta name="keywords" content="Pressure washing, gutter cleaning, patio cleaning, Sheffield, exterior cleaning">
     <style>
         /* General styles for sliders */
-        .slider, .gutter-slider, .review-slider {
+        .slider,
+        .gutter-slider,
+        .review-slider {
             position: relative;
             max-width: 100%;
             margin: auto;
             overflow: hidden;
         }
 
-        .slides img, .review-bubble {
+        .slides img,
+        .review-bubble {
             width: 100%;
             display: block;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
 
-        .slides img.active, .review-bubble.active {
+        .slides img.active,
+        .review-bubble.active {
             opacity: 1;
         }
 
-        /* Additional styles as needed */
-        /* Add your existing styles here */
+        /* Additional styles for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -53,6 +97,7 @@
         <section class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning">
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check">
                 <!-- Add other images here -->
             </div>
         </section>
