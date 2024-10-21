@@ -246,8 +246,9 @@
 
         <div class="slider">
             <div class="slides">
-                <img src="DP MEDIA/Drive Cleaning.png" alt="Driveway Cleaning">
-                <img src="DP MEDIA/Patio Cleaning.png" alt="Patio Cleaning">
+                <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after">
+                <img src="DP MEDIA/Patio before after.png" alt="Patio before after">
+                <img src="DP MEDIA/Path before after.png" alt="Patio before after">
             </div>
         </div>
     </section>
