@@ -9,10 +9,11 @@
             background-color: #000;
             color: #fff;
             box-sizing: border-box;
-        }
-         .stars {
+             .stars {
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
+        }
+        
         }
 
         header {
