@@ -14,7 +14,10 @@
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
 }
-
+      /* Add this to hide GitHub Pages repository name */
+        body > a {
+            display: none;
+        }
 
 
         header {
