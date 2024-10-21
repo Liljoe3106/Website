@@ -18,7 +18,8 @@
         body > a {
             display: none;
         }
-
+    </style>
+</head>
 
         header {
             background: linear-gradient(90deg, #000, #333);
