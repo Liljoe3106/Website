@@ -6,6 +6,7 @@
     <title>Dimension Powerwash - Exterior Cleaning Specialists</title>
     <meta name="description" content="Professional exterior cleaning services in Sheffield. We offer driveway, patio, and gutter cleaning. Get a free quote today!">
     <meta name="robots" content="index, follow">
+
     <style>
         /* Global styles */
         body {
@@ -16,58 +17,26 @@
             color: #fff;
             box-sizing: border-box;
         }
-        <style>
-    /* Global styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #000;
-        color: #fff;
-        box-sizing: border-box;
-    }
 
-    strong {
-        color: #FFD700; /* Yellow color for <strong> text */
-    }
+        strong {
+            color: #FFD700; /* Yellow color for <strong> text */
+        }
 
-    <style>
-    /* Global styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #000;
-        color: #fff;
-        box-sizing: border-box;
-    }
+        /* Headings in yellow */
+        h1, h2, h3, h4, h5, h6 {
+            color: #FFD700;
+        }
 
-    strong {
-        color: #FFD700; /* Yellow color for <strong> text */
-    }
+        /* Links in yellow */
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
 
-    /* Headings in yellow */
-    h1, h2, h3, h4, h5, h6 {
-        color: #FFD700;
-    }
-
-    /* Links in yellow */
-    a {
-        color: #FFD700;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: #FFD700;
-        text-decoration: underline;
-    }
-
-    /* Other existing styles */
-</style>
-
-
-</style>
-
+        a:hover {
+            color: #FFD700;
+            text-decoration: underline;
+        }
 
         .stars {
             color: #FFD700;
@@ -236,10 +205,6 @@
             height: 275px;
         }
 
-        .hidden {
-            display: none;
-        }
-
         @media (max-width: 800px) {
             section, footer {
                 padding: 15px;
@@ -319,91 +284,9 @@
                         <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
                     </div>
                     <div class="review-bubble hidden">
-                        <p>"Gave a great service cleaning our blocked gutters, the price was good and also very friendly. Would highly Recommend!"</p>
+                        <p>"Gave a great service cleaning our blocked gutters, the price was good and also very friendly. Would highly recommend!"</p>
                         <p><strong>Kenneth</strong> <span class="stars">★★★★★</span></p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="driveway-patio">
-            <h2>Driveway & Patio Cleaning</h2>
-            <p>Remove ingrained dirt, moss, algae, lichen, and black spots with our professional cleaning services.</p>
-            <div class="slider">
-                <div class="slides">
-                    <img src="DP MEDIA/Block paving before after.png" alt="Block paving cleaning before and after" loading="lazy">
-                    <img src="DP MEDIA/Patio before after.png" alt="Patio cleaning before and after" loading="lazy">
-                    <img src="DP MEDIA/Path before after.png" alt="Path cleaning before and after" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section id="gutter-cleaning">
-            <h2>Gutter Cleaning</h2>
-            <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
-            <div class="gutter-slider">
-                <div class="slides">
-                    <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
-                    <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning" loading="lazy">
-                </div>
-            </div>
-        </section>
-    </main>
-
-     <!-- Insert the About Us section here -->
-    <section id="about-us">
-        <h2>About Dimension Powerwash</h2>
-        <p>At Dimension Powerwash, we are your <strong>exterior cleaning specialists</strong> based in <strong>Sheffield</strong>. With years of experience in <a href="#driveway-patio">driveway cleaning</a>, <a href="#gutter-cleaning">gutter cleaning</a>, and <a href="#patio-cleaning">patio cleaning</a>, we take pride in delivering top-notch services to both residential and commercial clients.</p>
-
-        <h3>Why Choose Us?</h3>
-        <p>We combine the latest technology in pressure washing with eco-friendly cleaning methods, ensuring your property not only looks pristine but is also safe for your family and the environment.</p>
-
-        <h3>Our Mission</h3>
-        <p>Our mission is simple: to provide affordable, high-quality <strong>exterior cleaning services</strong> to homeowners and businesses in Sheffield and surrounding areas. We are committed to delivering excellent customer service, ensuring that every driveway, patio, and gutter we clean exceeds expectations.</p>
-
-        <h3>Service Areas</h3>
-        <p>We proudly serve <strong>Sheffield / Worksop</strong> and surrounding areas, including Rotherham and Chesterfield. If you're in need of professional <a href="#gutter-cleaning">gutter cleaning</a> or <a href="#driveway-patio">driveway and patio cleaning</a>, <a href="#contact">contact us</a> today for a free quote!</p>
-    </section>
-
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <br />
-        <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
-        <br /><br />
-        <p>Or give us a call!</p>
-        <p>Phone: 0114 457 3009</p>
-        <p>Also available on Facebook or WhatsApp.</p>
-        <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
-    </footer>
-
-    <script>
-        let slideIndex = 0;
-        let reviewIndex = 0;
-        let slides;
-
-        function cacheSlides(sliderSelector) {
-            slides = document.querySelectorAll(`${sliderSelector} .slides img`);
-        }
-
-        function showSlides() {
-            slides[slideIndex].classList.add('hidden');
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.remove('hidden');
-        }
-
-        function showReviewSlides() {
-            const reviewSlides = document.querySelectorAll('.review-slides .review-bubble');
-            reviewSlides[reviewIndex].classList.add('hidden');
-            reviewIndex = (reviewIndex + 1) % reviewSlides.length;
-            reviewSlides[reviewIndex].classList.remove('hidden');
-        }
-
-        cacheSlides('.slider');
-
-        setInterval(showSlides, 3000);
-        setInterval(showReviewSlides, 5000);
-    </script>
-</body>
-
-</html>
+        </
