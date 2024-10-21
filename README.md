@@ -31,6 +31,41 @@
         color: #FFD700; /* Yellow color for <strong> text */
     }
 
+    <style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    strong {
+        color: #FFD700; /* Yellow color for <strong> text */
+    }
+
+    /* Headings in yellow */
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFD700;
+    }
+
+    /* Links in yellow */
+    a {
+        color: #FFD700;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #FFD700;
+        text-decoration: underline;
+    }
+
+    /* Other existing styles */
+</style>
+
+
 </style>
 
 
