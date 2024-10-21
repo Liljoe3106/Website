@@ -308,7 +308,7 @@
     <section id="about">
         <div class="about-section">
             <h2>About Dimension Powerwash</h2>
-            <p>At Dimension Powerwash, we are dedicated to providing top-quality exterior cleaning services to homeowners in Sheffield / Worksop and surrounding areas. We use the latest equipment and techniques to ensure your property looks its best. Whether it’s driveway and patio cleaning or gutter cleaning / clearing, we take pride in delivering exceptional results that enhance the appearance and longevity of your property.</p>
+            <p>At Dimension Powerwash, we are dedicated to providing top-quality exterior cleaning services to homeowners in Sheffield. Our team of experienced professionals uses the latest equipment and techniques to ensure your property looks its best. Whether it’s driveway and patio cleaning or gutter maintenance, we take pride in delivering exceptional results that enhance the appearance and longevity of your property.</p>
             <p>Our commitment to customer satisfaction and our attention to detail set us apart in the industry. With Dimension Powerwash, you can trust that your property is in good hands.</p>
         </div>
     </section>
