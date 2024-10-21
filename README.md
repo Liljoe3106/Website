@@ -10,6 +10,10 @@
             color: #fff;
             box-sizing: border-box;
         }
+         .stars {
+            color: #FFD700; /* Yellow color */
+            font-size: 1.2em; /* Adjust the size if needed */
+        }
 
         header {
             background: linear-gradient(90deg, #000, #333);
@@ -323,6 +327,10 @@
                 <div class="review-bubble hidden">
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Would definitely use again and highly recommend."</p>
                     <p><strong>Morag</strong> ★★★★★</p>
+                </div>
+                         <div class="review-bubble hidden">
+                    <p>"Gave a great service cleaning our blocked gutters, the price was good and also very friendly. Would highly Recommend!"</p>
+                    <p><strong>Kenneth</strong> ★★★★★</p>
                 </div>
             </div>
         </div>
