@@ -14,12 +14,6 @@
             color: #FFD700; /* Yellow color */
             font-size: 1.2em; /* Adjust the size if needed */
 }
-      /* Add this to hide GitHub Pages repository name */
-        body > a {
-            display: none;
-        }
-    </style>
-</head>
 
         header {
             background: linear-gradient(90deg, #000, #333);
