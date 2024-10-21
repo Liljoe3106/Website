@@ -298,6 +298,21 @@
         </section>
     </main>
 
+     <!-- Insert the About Us section here -->
+    <section id="about-us">
+        <h2>About Dimension Powerwash</h2>
+        <p>At Dimension Powerwash, we are your <strong>exterior cleaning specialists</strong> based in <strong>Sheffield</strong>. With years of experience in <a href="#driveway-patio">driveway cleaning</a>, <a href="#gutter-cleaning">gutter cleaning</a>, and <a href="#patio-cleaning">patio cleaning</a>, we take pride in delivering top-notch services to both residential and commercial clients.</p>
+
+        <h3>Why Choose Us?</h3>
+        <p>We combine the latest technology in pressure washing with eco-friendly cleaning methods, ensuring your property not only looks pristine but is also safe for your family and the environment. Our team of skilled professionals are fully trained to handle a wide range of exterior cleaning tasks.</p>
+
+        <h3>Our Mission</h3>
+        <p>Our mission is simple: to provide affordable, high-quality <strong>exterior cleaning services</strong> to homeowners and businesses in Sheffield and surrounding areas. We are committed to delivering excellent customer service, ensuring that every driveway, patio, and gutter we clean exceeds expectations.</p>
+
+        <h3>Service Areas</h3>
+        <p>We proudly serve <strong>Sheffield / Worksop</strong> and surrounding areas, including Rotherham and Chesterfield. If you're in need of professional <a href="#gutter-cleaning">gutter cleaning</a> or <a href="#driveway-patio">driveway and patio cleaning</a>, <a href="#contact">contact us</a> today for a free quote!</p>
+    </section>
+
     <footer id="contact">
         <h3>Contact Us</h3>
         <br />
