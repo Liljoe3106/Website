@@ -10,6 +10,11 @@
             color: #fff;
             box-sizing: border-box;
         }
+        /* Global heading styles */
+h2, h3 {
+    color: #FFD700; /* Yellow color for all section headings */
+}
+
 
         .stars {
             color: #FFD700; /* Yellow color */
