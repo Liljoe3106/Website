@@ -221,7 +221,7 @@ h2, h3 {
 
     <nav>
         <ul>
-            <li><a href="#driveway-patio">Driveway & Patio Cleaning</a></li>
+            <li><a href="#driveway-patio">Drive & Patio Cleaning</a></li>
             <li><a href="#gutter-cleaning">Gutter Cleaning</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
