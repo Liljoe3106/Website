@@ -401,4 +401,3 @@
         setInterval(showReviewSlides, 5000);
     </script>
 </body>
-</html>
