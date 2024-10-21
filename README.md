@@ -1,4 +1,4 @@
-<html lang="en">
+    <html lang="en">
 <head>
     <style>
         /* Global styles */
@@ -310,27 +310,27 @@
             <div class="review-slides">
                 <div class="review-bubble">
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
-                    <p><strong>Clare</strong> ★★★★★</p>
+                    <p><strong>Clare</strong> <span class="stars">★★★★★</span></p>
                 </div>
                 <div class="review-bubble hidden">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
-                    <p><strong>Peter</strong> ★★★★★</p>
+                    <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
                 </div>
                 <div class="review-bubble hidden">
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway, and patio. I highly recommend and I will be booking in the near future!"</p>
-                    <p><strong>M</strong> ★★★★★</p>
+                    <p><strong>M</strong> <span class="stars">★★★★★</span></p>
                 </div>
                 <div class="review-bubble hidden">
                     <p>"Great service from Joe, getting my driveway clean, looks amazing thank you!"</p>
-                    <p><strong>Sam</strong> ★★★★★</p>
+                    <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
                 </div>
                 <div class="review-bubble hidden">
                     <p>"I had Joe round yesterday to do a gutter check, very friendly professional service, procedure clearly explained and camera footage provided. Would definitely use again and highly recommend."</p>
-                    <p><strong>Morag</strong> ★★★★★</p>
+                    <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
                 </div>
                          <div class="review-bubble hidden">
                     <p>"Gave a great service cleaning our blocked gutters, the price was good and also very friendly. Would highly Recommend!"</p>
-                    <p><strong>Kenneth</strong> ★★★★★</p>
+                    <p><strong>Kenneth</strong> <span class="stars">★★★★★</span></p>
                 </div>
             </div>
         </div>
