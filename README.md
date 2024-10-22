@@ -248,7 +248,6 @@
                 </div>
                 </div>
         </div>
-    </section>
 
     <section id="driveway-patio">
         <h2>Drive & Patio Cleaning</h2>
