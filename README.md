@@ -10,15 +10,14 @@
             color: #fff;
             box-sizing: border-box;
         }
-        /* Global heading styles */
-h2, h3 {
-    color: #FFD700; /* Yellow color for all section headings */
-}
 
+        h2, h3 {
+            color: #FFD700; /* Yellow color for all section headings */
+        }
 
         .stars {
-            color: #FFD700; /* Yellow color */
-            font-size: 1.2em; /* Adjust the size if needed */
+            color: #FFD700;
+            font-size: 1.2em;
         }
 
         header {
@@ -28,21 +27,11 @@ h2, h3 {
             text-align: center;
         }
 
-        .header-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .header-container img {
             height: 300px;
             width: auto;
             display: block;
             margin: 0 auto;
-        }
-
-        .header-container p {
-            color: #fff;
         }
 
         nav {
@@ -77,7 +66,6 @@ h2, h3 {
             background-color: rgba(255, 215, 0, 0.5);
         }
 
-        /* New About Us Section */
         #about-us {
             padding: 40px 20px;
             text-align: center;
@@ -86,7 +74,7 @@ h2, h3 {
         }
 
         #about-us h2 {
-            color: #FFD700; /* Yellow color for the title */
+            color: #FFD700;
             margin-bottom: 15px;
             font-size: 1.8em;
         }
@@ -97,7 +85,7 @@ h2, h3 {
         }
 
         #about-us p strong {
-            color: #FFD700; /* Yellow color for keywords */
+            color: #FFD700;
         }
 
         /* Slider styles */
@@ -114,6 +102,7 @@ h2, h3 {
         .slides, .review-slides {
             display: flex;
             transition: transform 0.6s ease-in-out;
+            flex-shrink: 0;
         }
 
         .slides img, .review-slides div {
@@ -178,7 +167,6 @@ h2, h3 {
             text-decoration: underline;
         }
 
-        /* Review bubble styles */
         .review-bubble {
             background: rgba(255, 215, 0, 0.2);
             border-radius: 15px;
@@ -190,7 +178,6 @@ h2, h3 {
             height: 275px;
         }
 
-        /* Responsive styles */
         @media (max-width: 800px) {
             section, footer {
                 padding: 15px;
@@ -227,10 +214,9 @@ h2, h3 {
         </ul>
     </nav>
 
-    <!-- New About Us Section -->
     <section id="about-us">
         <h2>About Us</h2>
-        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. With years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
+        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas.</p>
     </section>
 
     <section id="customer-reviews">
@@ -245,7 +231,6 @@ h2, h3 {
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
                     <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                <!-- Other reviews hidden -->
             </div>
         </div>
     </section>
@@ -274,28 +259,22 @@ h2, h3 {
         </div>
     </section>
 
-    <!-- Existing Contact Section -->
     <footer id="contact">
         <h3>Contact Us</h3>
-        <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
-        <br /><br />
-        <p>Or give us a call!</p>
         <p>Phone: 0114 457 3009</p>
-        <p>Also available on Facebook or WhatsApp.</p>
-        <br />
         <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
     </footer>
 
     <script>
-        let slideIndex = 0;
+        let slideIndex = [0, 0]; // For different sliders
         let reviewIndex = 0;
 
-        function showSlides(sliderClass) {
-            let slides = document.querySelectorAll(${sliderClass} .slides img);
+        function showSlides(sliderClass, index) {
+            let slides = document.querySelectorAll(sliderClass + ' .slides img');
             slides.forEach(slide => slide.classList.add('hidden'));
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.remove('hidden');
+            slideIndex[index] = (slideIndex[index] + 1) % slides.length;
+            slides[slideIndex[index]].classList.remove('hidden');
         }
 
         function showReviewSlides() {
@@ -305,16 +284,19 @@ h2, h3 {
             reviews[reviewIndex].classList.remove('hidden');
         }
 
-        // Show the first slide initially
-        document.querySelectorAll('.slides img').forEach(slide => slide.classList.add('hidden'));
-        document.querySelectorAll('.slides img')[0].classList.remove('hidden');
+        // Show the first slide initially for all sliders
+        document.querySelectorAll('.slider .slides img').forEach(slide => slide.classList.add('hidden'));
+        document.querySelectorAll('.slider .slides img')[0].classList.remove('hidden');
+
+        document.querySelectorAll('.gutter-slider .slides img').forEach(slide => slide.classList.add('hidden'));
+        document.querySelectorAll('.gutter-slider .slides img')[0].classList.remove('hidden');
 
         document.querySelectorAll('.review-bubble').forEach(review => review.classList.add('hidden'));
         document.querySelectorAll('.review-bubble')[0].classList.remove('hidden');
 
         // Set intervals for the sliders
-        setInterval(() => showSlides('.slider'), 3000);   // Driveway & Patio Slider
-        setInterval(() => showSlides('.gutter-slider'), 3000); // Gutter Slider
+        setInterval(() => showSlides('.slider', 0), 3000);   // Driveway & Patio Slider
+        setInterval(() => showSlides('.gutter-slider', 1), 3000); // Gutter Slider
         setInterval(showReviewSlides, 5000); // Review Slider
     </script>
 </body>
