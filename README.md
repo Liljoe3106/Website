@@ -245,8 +245,6 @@
                      <div class="review-bubble hidden">
                     <p>"Had Joe round to check our gutters, very friendly professional service, Procedure clearly explained and camera footage provided, highly recommend!"</p>
                     <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
-                </div>
-                </div>
         </div>
 
     <section id="driveway-patio">
