@@ -231,7 +231,22 @@
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
                     <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
                 </div>
-            </div>
+                 <div class="review-bubble hidden">
+                    <p>"Gave a great service, cleaning our blocked gutters. The price was good and also very friendly, would highly recommend!"</p>
+                    <p><strong>Keneth</strong> <span class="stars">★★★★★</span></p>
+                </div>
+                 <div class="review-bubble hidden">
+                    <p>"Great service from Joe getting my driveway clean, looks amazing thank you!"</p>
+                    <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
+                </div>
+                 <div class="review-bubble hidden">
+                    <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway and patio, I highly recommend and I will be booking in the near future!"</p>
+                    <p><strong>M</strong> <span class="stars">★★★★★</span></p>
+                     <div class="review-bubble hidden">
+                    <p>"Had Joe round to check our gutters, very friendly professional service, Procedure clearly explained and camera footage provided, highly recommend!"</p>
+                    <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
+                </div>
+                </div>
         </div>
     </section>
 
