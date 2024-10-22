@@ -198,6 +198,7 @@
     <!-- Driveway & Patio Cleaning Section -->
     <section id="driveway-patio" class="section">
         <h2>Driveway & Patio Cleaning</h2>
+        <p>We specialize in deep cleaning driveways and patios, restoring their original appearance using high-pressure washing equipment. Whether your surfaces are covered in dirt, moss, or algae, our services will leave them looking refreshed and spotless.</p>
         <div class="slider-container">
             <div class="slides">
                 <img src="https://dimensionpowerwash.com/DP-MEDIA/Drive%20Cleaning.png" alt="Driveway Cleaning">
@@ -213,6 +214,7 @@
     <!-- Gutter Cleaning Section -->
     <section id="gutter-cleaning" class="section">
         <h2>Gutter Cleaning</h2>
+        <p>Ensure the longevity of your property with our thorough gutter cleaning services. We remove debris, prevent water damage, and ensure that rainwater flows properly, safeguarding your home.</p>
         <div class="slider-container">
             <div class="slides">
                 <img src="https://dimensionpowerwash.com/DP-MEDIA/Fascia%20Cleaning.png" alt="Fascia Cleaning">
@@ -235,15 +237,15 @@
                     <div class="stars">★★★★★ - Clare</div>
                 </div>
                 <div class="review-bubble">
-                    <p>"The driveway looks amazing after the pressure washing. Highly recommend!"</p>
+                    <p>"The driveway and patio cleaning was perfect. Highly recommend Joe!"</p>
                     <div class="stars">★★★★★ - Peter</div>
                 </div>
                 <div class="review-bubble">
-                    <p>"Very professional service, and my patio has never looked better!"</p>
+                    <p>"Great service and excellent results! The patio is spotless."</p>
                     <div class="stars">★★★★★ - M</div>
                 </div>
                 <div class="review-bubble">
-                    <p>"Excellent work on both the gutters and the patio. Will definitely book again."</p>
+                    <p>"Joe is professional, and my gutters have never been cleaner!"</p>
                     <div class="stars">★★★★★ - Sam</div>
                 </div>
             </div>
