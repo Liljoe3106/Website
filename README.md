@@ -6,7 +6,7 @@
     <meta name="description" content="Professional exterior cleaning services in Sheffield. Specialists in pressure washing, drive cleaning, patio cleaning, and gutter cleaning. Serving Sheffield, Rotherham, and Worksop.">
     <meta name="keywords" content="pressure washing, drive cleaning, patio cleaning, gutter cleaning, Sheffield, Rotherham, Worksop">
     <title>Dimension Powerwash | Professional Exterior Cleaning Services Sheffield</title>
-    
+
     <!-- Open Graph tags for social media sharing -->
     <meta property="og:title" content="Dimension Powerwash - Exterior Cleaning Specialists Sheffield">
     <meta property="og:description" content="Professional pressure washing and gutter cleaning services in Sheffield and surrounding areas.">
@@ -94,21 +94,27 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
-        .review-bubble {
-            background: rgba(255, 215, 0, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px auto;
-            position: relative;
-            max-width: 90%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            min-height: 275px;
-            height: auto;
+        .section {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        /* Slider improvements */
         .slider-container {
             position: relative;
+            margin: 20px 0;
+            padding: 20px 0;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slides img {
+            max-width: 100%;
+            border-radius: 10px;
         }
 
         .slider-controls {
@@ -136,6 +142,18 @@
             background: rgba(255, 215, 0, 0.5);
         }
 
+        .review-bubble {
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px auto;
+            position: relative;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            min-height: 275px;
+            height: auto;
+        }
+
         /* Media query improvements */
         @media (max-width: 600px) {
             nav ul li {
@@ -156,27 +174,6 @@
 </head>
 
 <body>
-    <!-- Schema.org markup with absolute URLs -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Dimension Powerwash",
-      "image": "https://dimensionpowerwash.com/DP-MEDIA/logo.png",
-      "description": "Professional exterior cleaning services in Sheffield",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Sheffield",
-        "addressRegion": "South Yorkshire",
-        "addressCountry": "UK"
-      },
-      "url": "https://dimensionpowerwash.com",
-      "telephone": "0114 457 3009",
-      "areaServed": ["Sheffield", "Rotherham", "Worksop"]
-    }
-    </script>
-
-    <!-- Rest of the HTML structure remains similar but with improved accessibility -->
     <header>
         <div class="header-container">
             <img src="https://dimensionpowerwash.com/DP-MEDIA/logo.png" 
@@ -189,113 +186,107 @@
         </div>
     </header>
 
-    <!-- Navigation with improved accessibility -->
     <nav>
         <ul>
             <li><a href="#driveway-patio" aria-label="Learn about our drive and patio cleaning services">Drive & Patio Cleaning</a></li>
             <li><a href="#gutter-cleaning" aria-label="Learn about our gutter cleaning services">Gutter Cleaning</a></li>
+            <li><a href="#customer-reviews" aria-label="See what our customers say">Reviews</a></li>
             <li><a href="#contact" aria-label="Contact us for a quote">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Improved slider JavaScript -->
+    <!-- Driveway & Patio Cleaning Section -->
+    <section id="driveway-patio" class="section">
+        <h2>Driveway & Patio Cleaning</h2>
+        <div class="slider-container">
+            <div class="slides">
+                <img src="https://dimensionpowerwash.com/DP-MEDIA/Drive%20Cleaning.png" alt="Driveway Cleaning">
+                <img src="https://dimensionpowerwash.com/DP-MEDIA/Patio%20Cleaning.png" alt="Patio Cleaning">
+            </div>
+            <div class="slider-controls">
+                <button class="slider-button" onclick="sliders['driveway-patio'].prev()">Prev</button>
+                <button class="slider-button" onclick="sliders['driveway-patio'].next()">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gutter Cleaning Section -->
+    <section id="gutter-cleaning" class="section">
+        <h2>Gutter Cleaning</h2>
+        <div class="slider-container">
+            <div class="slides">
+                <img src="https://dimensionpowerwash.com/DP-MEDIA/Fascia%20Cleaning.png" alt="Fascia Cleaning">
+                <img src="https://dimensionpowerwash.com/DP-MEDIA/Free%20Gutter%20CHECK.png" alt="Gutter Cleaning">
+            </div>
+            <div class="slider-controls">
+                <button class="slider-button" onclick="sliders['gutter-cleaning'].prev()">Prev</button>
+                <button class="slider-button" onclick="sliders['gutter-cleaning'].next()">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="customer-reviews" class="section">
+        <h2>What Our Customers Say About Us</h2>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="review-bubble">
+                    <p>"Joe did a fantastic job cleaning my gutters. They look brand new!"</p>
+                    <div class="stars">★★★★★ - Clare</div>
+                </div>
+                <div class="review-bubble">
+                    <p>"The driveway looks amazing after the pressure washing. Highly recommend!"</p>
+                    <div class="stars">★★★★★ - Peter</div>
+                </div>
+                <div class="review-bubble">
+                    <p>"Very professional service, and my patio has never looked better!"</p>
+                    <div class="stars">★★★★★ - M</div>
+                </div>
+                <div class="review-bubble">
+                    <p>"Excellent work on both the gutters and the patio. Will definitely book again."</p>
+                    <div class="stars">★★★★★ - Sam</div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-button" onclick="sliders['customer-reviews'].prev()">Prev</button>
+                <button class="slider-button" onclick="sliders['customer-reviews'].next()">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Call us at 0114 457 3009 / 07494503865</p>
+        <p><a href="https://calendly.com/dimensionpowerwash/free-quote" style="color: #FFD700;">Book a Free Quote</a></p>
+        <p><a href="https://facebook.com/dimensionpowerwash" style="color: #FFD700;">Follow us on Facebook</a></p>
+    </section>
+
+    <!-- Script for Sliders -->
     <script>
-        class Slider {
-            constructor(containerId, interval = 3000) {
-                this.container = document.getElementById(containerId);
-                this.slides = this.container.querySelectorAll('.slides > *');
-                this.index = 0;
-                this.interval = interval;
-                this.intervalId = null;
-                this.isPaused = false;
+        let sliders = {};
 
-                this.init();
-            }
+        function Slider(id) {
+            this.container = document.querySelector(`#${id} .slides`);
+            this.currentSlide = 0;
+            this.slides = this.container.children;
 
-            init() {
-                // Add pause on hover
-                this.container.addEventListener('mouseenter', () => this.pause());
-                this.container.addEventListener('mouseleave', () => this.resume());
-                
-                // Add keyboard navigation
-                this.container.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') this.prev();
-                    if (e.key === 'ArrowRight') this.next();
-                });
+            this.showSlide = (index) => {
+                if (index >= this.slides.length) index = 0;
+                if (index < 0) index = this.slides.length - 1;
+                this.currentSlide = index;
+                this.container.style.transform = `translateX(-${index * 100}%)`;
+            };
 
-                this.start();
-            }
-
-            show(index) {
-                this.slides.forEach(slide => {
-                    slide.classList.remove('active');
-                    slide.classList.add('hidden');
-                });
-
-                this.slides[index].classList.remove('hidden');
-                requestAnimationFrame(() => {
-                    this.slides[index].classList.add('active');
-                });
-            }
-
-            next() {
-                this.index = (this.index + 1) % this.slides.length;
-                this.show(this.index);
-            }
-
-            prev() {
-                this.index = (this.index - 1 + this.slides.length) % this.slides.length;
-                this.show(this.index);
-            }
-
-            pause() {
-                this.isPaused = true;
-                clearInterval(this.intervalId);
-            }
-
-            resume() {
-                if (this.isPaused) {
-                    this.isPaused = false;
-                    this.start();
-                }
-            }
-
-            start() {
-                this.show(this.index);
-                this.intervalId = setInterval(() => this.next(), this.interval);
-            }
+            this.next = () => this.showSlide(this.currentSlide + 1);
+            this.prev = () => this.showSlide(this.currentSlide - 1);
         }
 
-        // Initialize sliders when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
             try {
-                const sliders = {
-                    'driveway-patio': new Slider('driveway-patio', 3000),
-                    'gutter-cleaning': new Slider('gutter-cleaning', 3000),
-                    'customer-reviews': new Slider('customer-reviews', 5000)
-                };
-
-                // Initialize touch events for all sliders
-                Object.values(sliders).forEach(slider => {
-                    let touchStartX = 0;
-                    
-                    slider.container.addEventListener('touchstart', e => {
-                        touchStartX = e.touches[0].clientX;
-                    }, { passive: true });
-
-                    slider.container.addEventListener('touchend', e => {
-                        const touchEndX = e.changedTouches[0].clientX;
-                        const diff = touchStartX - touchEndX;
-
-                        if (Math.abs(diff) > 50) {
-                            if (diff > 0) {
-                                slider.next();
-                            } else {
-                                slider.prev();
-                            }
-                        }
-                    }, { passive: true });
-                });
+                sliders['driveway-patio'] = new Slider('driveway-patio');
+                sliders['gutter-cleaning'] = new Slider('gutter-cleaning');
+                sliders['customer-reviews'] = new Slider('customer-reviews');
             } catch (error) {
                 console.error('Error initializing sliders:', error);
             }
