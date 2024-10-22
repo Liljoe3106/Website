@@ -246,6 +246,8 @@
                     <p>"Had Joe round to check our gutters, very friendly professional service, Procedure clearly explained and camera footage provided, highly recommend!"</p>
                     <p><strong>Morag</strong> <span class="stars">★★★★★</span></p>
         </div>
+            </section>
+
 
     <section id="driveway-patio">
         <h2>Drive & Patio Cleaning</h2>
