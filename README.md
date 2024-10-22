@@ -1,38 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dimension Powerwash offers top-quality pressure washing and gutter cleaning services in Sheffield. Serving residential and commercial clients.">
-    <meta name="keywords" content="Pressure washing, gutter cleaning, patio cleaning, Sheffield, exterior cleaning">
-    <title>Dimension Powerwash - Exterior Cleaning Services in Sheffield</title>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Dimension Powerwash",
-      "image": "https://yourwebsite.com/DP MEDIA/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Sheffield",
-        "addressRegion": "South Yorkshire",
-        "postalCode": "S1",
-        "addressCountry": "UK"
-      },
-      "url": "https://yourwebsite.com",
-      "telephone": "0114 457 3009",
-      "priceRange": "$$",
-      "servesCuisine": "Cleaning Services",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "53.3811",
-        "longitude": "-1.4701"
-      }
-    }
-    </script>
-
     <style>
         /* Global styles */
         body {
@@ -43,15 +10,15 @@
             color: #fff;
             box-sizing: border-box;
         }
-
         /* Global heading styles */
-        h2, h3 {
-            color: #FFD700;
-        }
+h2, h3 {
+    color: #FFD700; /* Yellow color for all section headings */
+}
+
 
         .stars {
-            color: #FFD700;
-            font-size: 1.2em;
+            color: #FFD700; /* Yellow color */
+            font-size: 1.2em; /* Adjust the size if needed */
         }
 
         header {
@@ -72,6 +39,10 @@
             width: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        .header-container p {
+            color: #fff;
         }
 
         nav {
@@ -106,6 +77,7 @@
             background-color: rgba(255, 215, 0, 0.5);
         }
 
+        /* New About Us Section */
         #about-us {
             padding: 40px 20px;
             text-align: center;
@@ -114,14 +86,21 @@
         }
 
         #about-us h2 {
+            color: #FFD700; /* Yellow color for the title */
             margin-bottom: 15px;
             font-size: 1.8em;
         }
 
         #about-us p {
+            color: #fff;
             font-size: 1.1em;
         }
 
+        #about-us p strong {
+            color: #FFD700; /* Yellow color for keywords */
+        }
+
+        /* Slider styles */
         .slider, .gutter-slider, .review-slider {
             width: 100%;
             max-width: 1000px;
@@ -132,11 +111,18 @@
             border: none;
         }
 
-        .slides img, .review-bubble {
+        .slides, .review-slides {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slides img, .review-slides div {
             width: 100%;
             flex-shrink: 0;
-            opacity: 0;
-            transition: opacity 0.6s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .prev, .next {
@@ -192,6 +178,7 @@
             text-decoration: underline;
         }
 
+        /* Review bubble styles */
         .review-bubble {
             background: rgba(255, 215, 0, 0.2);
             border-radius: 15px;
@@ -240,6 +227,7 @@
         </ul>
     </nav>
 
+    <!-- New About Us Section -->
     <section id="about-us">
         <h2>About Us</h2>
         <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. With years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
@@ -249,14 +237,15 @@
         <h2>What Our Customers Say About Us</h2>
         <div class="review-slider">
             <div class="review-slides">
-                <div class="review-bubble" style="opacity: 1;">
+                <div class="review-bubble">
                     <p>"Had gutters cleaned out. 3 story house and high gutters but Joe did a great job with the sky vac and was really nice to deal with - highly recommend!"</p>
                     <p><strong>Clare</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                <div class="review-bubble">
+                <div class="review-bubble hidden">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
                     <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
                 </div>
+                <!-- Other reviews hidden -->
             </div>
         </div>
     </section>
@@ -267,8 +256,8 @@
 
         <div class="slider">
             <div class="slides">
-                <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after - Dimension Powerwash" loading="lazy" style="opacity: 1;">
-                <img src="DP MEDIA/Patio before after.png" alt="Patio before after - Dimension Powerwash" loading="lazy">
+                <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after" loading="lazy">
+                <img src="DP MEDIA/Patio before after.png" alt="Patio before after" loading="lazy">
             </div>
         </div>
     </section>
@@ -279,52 +268,54 @@
 
         <div class="gutter-slider">
             <div class="slides">
-                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check - Dimension Powerwash" loading="lazy" style="opacity: 1;">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning - Dimension Powerwash" loading="lazy">
+                <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
+                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning" loading="lazy">
             </div>
         </div>
     </section>
 
+    <!-- Existing Contact Section -->
     <footer id="contact">
         <h3>Contact Us</h3>
+        <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
+        <br /><br />
         <p>Or give us a call!</p>
         <p>Phone: 0114 457 3009</p>
         <p>Also available on Facebook or WhatsApp.</p>
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a>
+        <br />
+        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
     </footer>
 
     <script>
-        let sliderIndex = {
-            'slider': 0,
-            'gutter-slider': 0,
-            'review-slider': 0
-        };
+        let slideIndex = 0;
+        let reviewIndex = 0;
 
         function showSlides(sliderClass) {
-            const slides = document.querySelectorAll(`${sliderClass} .slides img`);
-            slides.forEach(slide => slide.style.opacity = 0);
-            sliderIndex[sliderClass] = (sliderIndex[sliderClass] + 1) % slides.length;
-            slides[sliderIndex[sliderClass]].style.opacity = 1;
+            let slides = document.querySelectorAll(${sliderClass} .slides img);
+            slides.forEach(slide => slide.classList.add('hidden'));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.remove('hidden');
         }
 
         function showReviewSlides() {
-            const reviews = document.querySelectorAll('.review-slides .review-bubble');
-            reviews.forEach(review => review.style.opacity = 0);
-            sliderIndex['review-slider'] = (sliderIndex['review-slider'] + 1) % reviews.length;
-            reviews[sliderIndex['review-slider']].style.opacity = 1;
+            let reviews = document.querySelectorAll('.review-slides .review-bubble');
+            reviews.forEach(review => review.classList.add('hidden'));
+            reviewIndex = (reviewIndex + 1) % reviews.length;
+            reviews[reviewIndex].classList.remove('hidden');
         }
 
-        // Initial setup
-        document.querySelectorAll('.slides img, .review-bubble').forEach(item => item.style.opacity = 0);
-        document.querySelector('.slider .slides img').style.opacity = 1;
-        document.querySelector('.gutter-slider .slides img').style.opacity = 1;
-        document.querySelector('.review-bubble').style.opacity = 1;
+        // Show the first slide initially
+        document.querySelectorAll('.slides img').forEach(slide => slide.classList.add('hidden'));
+        document.querySelectorAll('.slides img')[0].classList.remove('hidden');
 
-        // Unified slider interval
-        setInterval(() => showSlides('.slider'), 3000);
-        setInterval(() => showSlides('.gutter-slider'), 3000);
-        setInterval(showReviewSlides, 5000);
+        document.querySelectorAll('.review-bubble').forEach(review => review.classList.add('hidden'));
+        document.querySelectorAll('.review-bubble')[0].classList.remove('hidden');
+
+        // Set intervals for the sliders
+        setInterval(() => showSlides('.slider'), 3000);   // Driveway & Patio Slider
+        setInterval(() => showSlides('.gutter-slider'), 3000); // Gutter Slider
+        setInterval(showReviewSlides, 5000); // Review Slider
     </script>
 </body>
 </html>
