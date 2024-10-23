@@ -11,10 +11,9 @@
             box-sizing: border-box;
         }
         /* Global heading styles */
-h2, h3 {
-    color: #FFD700; /* Yellow color for all section headings */
-}
-
+        h2, h3 {
+            color: #FFD700; /* Yellow color for all section headings */
+        }
 
         .stars {
             color: #FFD700; /* Yellow color */
@@ -280,22 +279,40 @@ h2, h3 {
         <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
         <br /><br />
-        <p>Or give us a call!</p>
-        <p>Phone: 0114 457 3009</p>
-        <p>Also available on Facebook or WhatsApp.</p>
+        <p>Call us today for a quote:</p>
+        <p>0114 457 3009</p>
+        <p>07494503865</p>
         <br />
-        <a href="https://facebook.com/dimensionpowerwash" target="_blank">Follow us on Facebook!</a><br />
+        <p>Follow us on <a href="https://facebook.com/dimensionpowerwash" target="_blank">Facebook</a></p>
     </footer>
 
     <script>
-        let slideIndex = 0;
-        let reviewIndex = 0;
-
+        // Fixed template literal syntax
         function showSlides(sliderClass) {
-            let slides = document.querySelectorAll(${sliderClass} .slides img);
+            let slides = document.querySelectorAll(`${sliderClass} .slides img`); // Fixed template literal
             slides.forEach(slide => slide.classList.add('hidden'));
             slideIndex = (slideIndex + 1) % slides.length;
             slides[slideIndex].classList.remove('hidden');
+        }
+
+        // Separated slide indices for different sliders
+        let drivewaySlideIndex = 0;
+        let gutterSlideIndex = 0;
+        let reviewIndex = 0;
+
+        // Updated slider functions to handle different sections independently
+        function showDrivewaySlides() {
+            let slides = document.querySelectorAll('.slider .slides img');
+            slides.forEach(slide => slide.classList.add('hidden'));
+            drivewaySlideIndex = (drivewaySlideIndex + 1) % slides.length;
+            slides[drivewaySlideIndex].classList.remove('hidden');
+        }
+
+        function showGutterSlides() {
+            let slides = document.querySelectorAll('.gutter-slider .slides img');
+            slides.forEach(slide => slide.classList.add('hidden'));
+            gutterSlideIndex = (gutterSlideIndex + 1) % slides.length;
+            slides[gutterSlideIndex].classList.remove('hidden');
         }
 
         function showReviewSlides() {
@@ -305,17 +322,29 @@ h2, h3 {
             reviews[reviewIndex].classList.remove('hidden');
         }
 
-        // Show the first slide initially
-        document.querySelectorAll('.slides img').forEach(slide => slide.classList.add('hidden'));
-        document.querySelectorAll('.slides img')[0].classList.remove('hidden');
+        // Initialize sliders
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show initial slides
+            document.querySelectorAll('.slider .slides img').forEach((slide, index) => {
+                if (index === 0) slide.classList.remove('hidden');
+                else slide.classList.add('hidden');
+            });
 
-        document.querySelectorAll('.review-bubble').forEach(review => review.classList.add('hidden'));
-        document.querySelectorAll('.review-bubble')[0].classList.remove('hidden');
+            document.querySelectorAll('.gutter-slider .slides img').forEach((slide, index) => {
+                if (index === 0) slide.classList.remove('hidden');
+                else slide.classList.add('hidden');
+            });
 
-        // Set intervals for the sliders
-        setInterval(() => showSlides('.slider'), 3000);   // Driveway & Patio Slider
-        setInterval(() => showSlides('.gutter-slider'), 3000); // Gutter Slider
-        setInterval(showReviewSlides, 5000); // Review Slider
+            document.querySelectorAll('.review-bubble').forEach((review, index) => {
+                if (index === 0) review.classList.remove('hidden');
+                else review.classList.add('hidden');
+            });
+
+            // Set intervals for the sliders
+            setInterval(showDrivewaySlides, 3000);  // Driveway & Patio Slider
+            setInterval(showGutterSlides, 3000);    // Gutter Slider
+            setInterval(showReviewSlides, 5000);    // Review Slider
+        });
     </script>
 </body>
 </html>
