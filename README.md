@@ -200,8 +200,9 @@
         <p>We specialize in deep cleaning driveways and patios, restoring their original appearance using high-pressure washing equipment. Whether your surfaces are covered in dirt, moss, or algae, our services will leave them looking refreshed and spotless.</p>
         <div class="slider-container">
             <div class="slides">
-                <img src="https://dimensionpowerwash.com/DP MEDIA/Drive%20Cleaning.png" alt="Driveway Cleaning">
-                <img src="https://dimensionpowerwash.com/DP MEDIA/Patio%20Cleaning.png" alt="Patio Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Drive before after.png" alt="Driveway Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Patio before after.png" alt="Patio Cleaning">
+                 <img src="https://dimensionpowerwash.com/DP MEDIA/Path before after.png" alt="Patio Cleaning">
             </div>
             <div class="slider-controls">
                 <button class="slider-button" onclick="sliders['driveway-patio'].prev()">Prev</button>
