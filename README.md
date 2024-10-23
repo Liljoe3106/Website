@@ -279,7 +279,7 @@
         <br />
         <a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank">Get your free gutter check here, or book your free quote today!</a>
         <br /><br />
-        <p>Call us today for a quote:</p>
+        <p>Or just give us a call!:</p>
         <p>0114 457 3009</p>
         <p>07494503865</p>
         <br />
