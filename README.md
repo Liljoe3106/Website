@@ -270,7 +270,6 @@ h2, h3 {
         <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
-                <img src="DP MEDIA/Fascia Cleaning.png" alt="Fascia Cleaning" loading="lazy">
             </div>
         </div>
     </section>
