@@ -258,6 +258,7 @@ h2, h3 {
             <div class="slides">
                 <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after" loading="lazy">
                 <img src="DP MEDIA/Patio before after.png" alt="Patio before after" loading="lazy">
+                 <img src="DP MEDIA/Path before after.png" alt="Path before after" loading="lazy">
             </div>
         </div>
     </section>
