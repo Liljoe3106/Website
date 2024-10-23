@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
     <!-- Open Graph tags for social media sharing -->
     <meta property="og:title" content="Dimension Powerwash - Exterior Cleaning Specialists Sheffield">
     <meta property="og:description" content="Professional pressure washing and gutter cleaning services in Sheffield and surrounding areas.">
-    <meta property="og:image" content="https://dimensionpowerwash.com/DP-MEDIA/logo.png">
+    <meta property="og:image" content="https://dimensionpowerwash.com/DP MEDIA/logo.png">
     <meta property="og:url" content="https://dimensionpowerwash.com">
     
     <style>
@@ -176,7 +175,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="https://dimensionpowerwash.com/DP-MEDIA/logo.png" 
+            <img src="https://dimensionpowerwash.com/DP MEDIA/logo.png" 
                  alt="Dimension Powerwash Logo" 
                  loading="lazy"
                  width="300"
@@ -201,8 +200,8 @@
         <p>We specialize in deep cleaning driveways and patios, restoring their original appearance using high-pressure washing equipment. Whether your surfaces are covered in dirt, moss, or algae, our services will leave them looking refreshed and spotless.</p>
         <div class="slider-container">
             <div class="slides">
-                <img src="https://dimensionpowerwash.com/DP-MEDIA/Drive%20Cleaning.png" alt="Driveway Cleaning">
-                <img src="https://dimensionpowerwash.com/DP-MEDIA/Patio%20Cleaning.png" alt="Patio Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Drive%20Cleaning.png" alt="Driveway Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Patio%20Cleaning.png" alt="Patio Cleaning">
             </div>
             <div class="slider-controls">
                 <button class="slider-button" onclick="sliders['driveway-patio'].prev()">Prev</button>
@@ -217,8 +216,8 @@
         <p>Ensure the longevity of your property with our thorough gutter cleaning services. We remove debris, prevent water damage, and ensure that rainwater flows properly, safeguarding your home.</p>
         <div class="slider-container">
             <div class="slides">
-                <img src="https://dimensionpowerwash.com/DP-MEDIA/Fascia%20Cleaning.png" alt="Fascia Cleaning">
-                <img src="https://dimensionpowerwash.com/DP-MEDIA/Free%20Gutter%20CHECK.png" alt="Gutter Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Fascia%20Cleaning.png" alt="Fascia Cleaning">
+                <img src="https://dimensionpowerwash.com/DP MEDIA/Free%20Gutter%20CHECK.png" alt="Gutter Cleaning">
             </div>
             <div class="slider-controls">
                 <button class="slider-button" onclick="sliders['gutter-cleaning'].prev()">Prev</button>
