@@ -229,7 +229,7 @@
     <!-- New About Us Section -->
     <section id="about-us">
         <h2>About Us</h2>
-        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, <strong>roof cleaning</strong> and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. We are more than just a small jet wash company, with years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
+        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, <strong>roof cleaning</strong> and <strong>gutter clearing/cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. We are more than just a small jet wash company, with years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
     </section>
 
     <section id="customer-reviews">
@@ -243,6 +243,14 @@
                 <div class="review-bubble hidden">
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
                     <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
+                </div>
+                    <div class="review-bubble hidden">
+                    <p>"Great service from Joe getting our driveway clean, looks amazing thank you!"</p>
+                    <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
+                </div>
+                    <div class="review-bubble hidden">
+                    <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway and patio, I highly recommend and I will be booking in the near future!"</p>
+                    <p><strong>M</strong> <span class="stars">★★★★★</span></p>
                 </div>
                 <!-- Other reviews hidden -->
             </div>
