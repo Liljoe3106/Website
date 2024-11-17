@@ -229,7 +229,7 @@
     <!-- New About Us Section -->
     <section id="about-us">
         <h2>About Us</h2>
-        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. With years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
+        <p>Welcome to <strong>Dimension Powerwash</strong>! We are dedicated to providing high-quality exterior cleaning services, specializing in <strong>pressure washing</strong>, <strong>drive cleaning</strong>, <strong>patio cleaning</strong>, <strong>roof cleaning</strong> and <strong>gutter cleaning</strong>. Based in <strong>Sheffield</strong>, we proudly serve both residential and commercial clients across the city and surrounding areas, including <strong>Rotherham</strong> and <strong>Worksop</strong>. We are more than just a small jet wash company, with years of experience, our focus is on delivering outstanding results and ensuring customer satisfaction, helping to transform and maintain your outdoor spaces. Let us restore the beauty of your property with our professional cleaning services.</p>
     </section>
 
     <section id="customer-reviews">
