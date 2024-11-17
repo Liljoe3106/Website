@@ -272,7 +272,7 @@
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris.</p>
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris with our gutter vaccum service. We will clear your gutters so that rain water can flow freely. We also offer a full washdown of the gutters and fascias should you want them looking like new!</p>
 
         <div class="gutter-slider">
             <div class="slides">
