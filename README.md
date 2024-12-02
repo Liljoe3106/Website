@@ -244,15 +244,14 @@
                     <p>"Great communication and great job done. Gutters now clear of gunk - thanks Joe!"</p>
                     <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                    <div class="review-bubble hidden">
+                <div class="review-bubble hidden">
                     <p>"Great service from Joe getting our driveway clean, looks amazing thank you!"</p>
                     <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                    <div class="review-bubble hidden">
+                <div class="review-bubble hidden">
                     <p>"Excellent service with a fair price! Joe cleaned our gutters, driveway and patio, I highly recommend and I will be booking in the near future!"</p>
                     <p><strong>M</strong> <span class="stars">★★★★★</span></p>
                 </div>
-                <!-- Other reviews hidden -->
             </div>
         </div>
     </section>
@@ -265,23 +264,24 @@
             <div class="slides">
                 <img src="DP MEDIA/Block paving before after.png" alt="Block paving before after" loading="lazy">
                 <img src="DP MEDIA/Patio before after.png" alt="Patio before after" loading="lazy">
-                 <img src="DP MEDIA/Path before after.png" alt="Path before after" loading="lazy">
+                <img src="DP MEDIA/Path before after.png" alt="Path before after" loading="lazy">
             </div>
         </div>
     </section>
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris with our gutter vaccum service. We will clear your gutters so that rain water can flow freely. We also offer a full washdown of the gutters and fascias should you want them looking like new!</p>
+        <p>Prevent expensive repairs caused by blockages, leaks, and debris with our gutter vacuum service. We will clear your gutters so that rain water can flow freely. We also offer a full washdown of the gutters and fascias should you want them looking like new!</p>
 
         <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
+                <img src="DP MEDIA/Gutter Cleaning Before.png" alt="Gutter Cleaning Before" loading="lazy">
+                <img src="DP MEDIA/Gutter Cleaning After.png" alt="Gutter Cleaning After" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Existing Contact Section -->
     <footer id="contact">
         <h3>Contact Us</h3>
         <br />
@@ -296,28 +296,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize driveway and patio slider
             document.querySelectorAll('.slider .slides img').forEach((slide, index) => {
                 if (index === 0) slide.classList.remove('hidden');
                 else slide.classList.add('hidden');
             });
 
-            // Initialize gutter slider
             document.querySelectorAll('.gutter-slider .slides img').forEach((slide, index) => {
                 if (index === 0) slide.classList.remove('hidden');
                 else slide.classList.add('hidden');
             });
 
-            // Initialize review slider
             document.querySelectorAll('.review-bubble').forEach((review, index) => {
                 if (index === 0) review.classList.remove('hidden');
                 else review.classList.add('hidden');
             });
 
-            // Set intervals for the sliders
-            setInterval(showDrivewaySlides, 3000); // Driveway & Patio Slider
-            setInterval(showGutterSlides, 3000);  // Gutter Slider
-            setInterval(showReviewSlides, 5000);  // Review Slider
+            setInterval(showDrivewaySlides, 3000);
+            setInterval(showGutterSlides, 3000);
+            setInterval(showReviewSlides, 5000);
         });
 
         let drivewaySlideIndex = 0;
@@ -333,6 +329,7 @@
 
         function showGutterSlides() {
             const slides = document.querySelectorAll('.gutter-slider .slides img');
+            if (slides.length <= 1) return;
             slides.forEach(slide => slide.classList.add('hidden'));
             gutterSlideIndex = (gutterSlideIndex + 1) % slides.length;
             slides[gutterSlideIndex].classList.remove('hidden');
