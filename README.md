@@ -278,6 +278,8 @@
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
             </div>
+               <img src="DP MEDIA/Gutter Clearing.png" alt="Gutter Clearing" loading="lazy">
+            </div>
         </div>
     </section>
 
