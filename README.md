@@ -278,8 +278,6 @@
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
             </div>
-               <img src="DP MEDIA/Gutter Clearing.png" alt="Gutter Clearing" loading="lazy">
-            </div>
         </div>
     </section>
 
@@ -297,64 +295,55 @@
     </footer>
 
     <script>
-        // Fixed template literal syntax
-        function showSlides(sliderClass) {
-            let slides = document.querySelectorAll(`${sliderClass} .slides img`); // Fixed template literal
-            slides.forEach(slide => slide.classList.add('hidden'));
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.remove('hidden');
-        }
-
-        // Separated slide indices for different sliders
-        let drivewaySlideIndex = 0;
-        let gutterSlideIndex = 0;
-        let reviewIndex = 0;
-
-        // Updated slider functions to handle different sections independently
-        function showDrivewaySlides() {
-            let slides = document.querySelectorAll('.slider .slides img');
-            slides.forEach(slide => slide.classList.add('hidden'));
-            drivewaySlideIndex = (drivewaySlideIndex + 1) % slides.length;
-            slides[drivewaySlideIndex].classList.remove('hidden');
-        }
-
-        function showGutterSlides() {
-            let slides = document.querySelectorAll('.gutter-slider .slides img');
-            slides.forEach(slide => slide.classList.add('hidden'));
-            gutterSlideIndex = (gutterSlideIndex + 1) % slides.length;
-            slides[gutterSlideIndex].classList.remove('hidden');
-        }
-
-        function showReviewSlides() {
-            let reviews = document.querySelectorAll('.review-slides .review-bubble');
-            reviews.forEach(review => review.classList.add('hidden'));
-            reviewIndex = (reviewIndex + 1) % reviews.length;
-            reviews[reviewIndex].classList.remove('hidden');
-        }
-
-        // Initialize sliders
-        document.addEventListener('DOMContentLoaded', function() {
-            // Show initial slides
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize driveway and patio slider
             document.querySelectorAll('.slider .slides img').forEach((slide, index) => {
                 if (index === 0) slide.classList.remove('hidden');
                 else slide.classList.add('hidden');
             });
 
+            // Initialize gutter slider
             document.querySelectorAll('.gutter-slider .slides img').forEach((slide, index) => {
                 if (index === 0) slide.classList.remove('hidden');
                 else slide.classList.add('hidden');
             });
 
+            // Initialize review slider
             document.querySelectorAll('.review-bubble').forEach((review, index) => {
                 if (index === 0) review.classList.remove('hidden');
                 else review.classList.add('hidden');
             });
 
             // Set intervals for the sliders
-            setInterval(showDrivewaySlides, 3000);  // Driveway & Patio Slider
-            setInterval(showGutterSlides, 3000);    // Gutter Slider
-            setInterval(showReviewSlides, 5000);    // Review Slider
+            setInterval(showDrivewaySlides, 3000); // Driveway & Patio Slider
+            setInterval(showGutterSlides, 3000);  // Gutter Slider
+            setInterval(showReviewSlides, 5000);  // Review Slider
         });
+
+        let drivewaySlideIndex = 0;
+        let gutterSlideIndex = 0;
+        let reviewIndex = 0;
+
+        function showDrivewaySlides() {
+            const slides = document.querySelectorAll('.slider .slides img');
+            slides.forEach(slide => slide.classList.add('hidden'));
+            drivewaySlideIndex = (drivewaySlideIndex + 1) % slides.length;
+            slides[drivewaySlideIndex].classList.remove('hidden');
+        }
+
+        function showGutterSlides() {
+            const slides = document.querySelectorAll('.gutter-slider .slides img');
+            slides.forEach(slide => slide.classList.add('hidden'));
+            gutterSlideIndex = (gutterSlideIndex + 1) % slides.length;
+            slides[gutterSlideIndex].classList.remove('hidden');
+        }
+
+        function showReviewSlides() {
+            const reviews = document.querySelectorAll('.review-bubble');
+            reviews.forEach(review => review.classList.add('hidden'));
+            reviewIndex = (reviewIndex + 1) % reviews.length;
+            reviews[reviewIndex].classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
