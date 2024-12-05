@@ -296,14 +296,15 @@
              
             <li> Moss cloggs gutters & attracts birds.
             <li> Try our Moss Removal and <strong style="color: #FFD700;">Roof Treatment Service </strong>.
-            <li> Softwashing is less invasive than presuure washing. </li>
-            <li> We also do <strong style="color: #FFD700;"> Conservatory Roofs</strong>.
+            <li> Softwashing is less invasive than pressure washing. </li>
+            <li> We also do <strong style="color: #FFD700;"> Conservatory Roof Cleaning</strong>.
             <br>
             <br>
 
         <div class="roof-slider">
             <div class="slides">
                 <img src="DP MEDIA/Roof Treatment.png" alt="Roof Treatment" loading="lazy">
+                 <img src="DP MEDIA/Con roof before after.png" alt="Con roof before after" loading="lazy">
             </div>
         </div>
 
