@@ -277,7 +277,12 @@
 
     <section id="gutter-cleaning">
         <h2>Gutter Cleaning</h2>
-        <p>Prevent expensive repairs caused by blockages, leaks, and debris with our gutter vacuum service. We will clear your gutters so that rain water can flow freely. We also offer a full washdown of the gutters and fascias should you want them looking like new!</p>
+
+             <li> Gutter Vacuum Service </li>
+             <li> <strong style="color: #FFD700;">Prevent expensive repairs</strong> caused by blockes, leaks and debris. </strong> .</li>
+            <li> UPVC Cleaning, including <strong style="color: #FFD700;">Soffits and Fascias</strong>. </li>
+            <br>
+            <br>
 
         <div class="gutter-slider">
             <div class="slides">
