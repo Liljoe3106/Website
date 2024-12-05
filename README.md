@@ -293,12 +293,9 @@
 
     <section id="roof-cleaning">
         <h2>Roof Cleaning</h2>
-        <p>Your roof is the main reason your gutters get blocked, the growth of moss on your roof tiles can cause a handful of issues down the road, if left untreated. Wind, rainfall and the attraction of birds can cause this moss to block up your gutters and create enough organic growth for weeds to take root and cause further damage to your proprty. We offer a moss removal and anti-fungal wash treatment that not only prevents the growth of moss for years to come but acts as a self cleaning agent that will allow your roof to look cleaner and cleaner as the months go by. It's a much less invasive way of cleaning your roof compared to pressure washing.
-        </p>
-
              
             <li> Moss cloggs gutters & attracts birds.
-            <li> Try our Moss Removal and <strong style="color: #FFD700;">Roof Treatment Service </li>.
+            <li> Try our Moss Removal and <strong style="color: #FFD700;">Roof Treatment Service </strong>.
             <li> Softwashing is less invasive than presuure washing. </li>
             <li> We also do <strong style="color: #FFD700;"> Conservatory Roofs</strong>.
             <br>
