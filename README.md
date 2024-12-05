@@ -295,7 +295,7 @@
         <h2>Roof Cleaning</h2>
              
             <li> Moss cloggs gutters & attracts birds.
-            <li> Try our Moss Removal and <strong style="color: #FFD700;">Roof Treatment Service </strong>.
+            <li> Try our Moss Removal and <strong style="color: #FFD700;">Roof Treatment Service</strong>.
             <li> Softwashing is less invasive than pressure washing. </li>
             <li> We also do <strong style="color: #FFD700;"> Conservatory Roof Cleaning</strong>.
             <br>
