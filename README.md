@@ -286,7 +286,8 @@
 
     <section id="roof-cleaning">
         <h2>Roof Cleaning</h2>
-        <p>Restore the appearance and functionality of your roof with our professional cleaning services. Remove moss, algae, and other debris to enhance your home's curb appeal and prevent potential damage.</p>
+        <p>Your roof is the main reason your gutters get blocked, the growth of moss on your roof tiles can cause a handful of issues down the road, if left untreated. Wind, rainfall and the attraction of birds can cause this moss to block up your gutters and create enough organic growth for weeds to take root and cause further damage to your proprty. We offer a moss removal and anti-fungal wash treatment that not only prevents the growth of moss for years to come but acts as a self cleaning agent that will allow your roof to look cleaner and cleaner as the months go by. It's a much less invasive way of cleaning your roof compared to pressure washing.
+        </p>
 
         <div class="roof-slider">
             <div class="slides">
