@@ -263,7 +263,6 @@
             <li> Bring up surfaces <strong style="color: #FFD700;">like new</strong>. </li>
             <li> Including <strong style="color: #FFD700;">Block Paving, Patio Stone, Walls, Paths, Tarmac, Resin & more</strong>.
             <br>
-            </br>
 
             
         <div class="slider">
