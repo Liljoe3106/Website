@@ -278,7 +278,7 @@
         <h2>Gutter Cleaning</h2>
 
              <li> Gutter Vacuum Service </li>
-             <li> <strong style="color: #FFD700;">Prevent expensive repairs</strong> caused by blockes, leaks and debris. </li>
+             <li> <strong style="color: #FFD700;">Prevent expensive repairs</strong> caused by blockages, leaks and debris. </li>
             <li> UPVC Cleaning, including <strong style="color: #FFD700;">Soffits and Fascias</strong>.
             <br>
             <br>
@@ -307,6 +307,8 @@
                  <img src="DP MEDIA/Con roof before after.PNG" alt="Con roof before after" loading="lazy">
             </div>
         </div>
+        <br>
+        <br>
 
     <footer id="contact">
         <h3>Contact Us</h3>
