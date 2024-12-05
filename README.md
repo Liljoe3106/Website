@@ -304,7 +304,7 @@
         <div class="roof-slider">
             <div class="slides">
                 <img src="DP MEDIA/Roof Treatment.png" alt="Roof Treatment" loading="lazy">
-                 <img src="DP MEDIA/Con roof before after.png" alt="Con roof before after" loading="lazy">
+                 <img src="DP MEDIA/Con roof before after.PNG" alt="Con roof before after" loading="lazy">
             </div>
         </div>
 
