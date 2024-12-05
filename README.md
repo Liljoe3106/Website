@@ -383,5 +383,4 @@
             reviews[reviewIndex].classList.remove('hidden');
         }
     </script>
-</body>
-</html>
+
