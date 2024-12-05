@@ -259,11 +259,11 @@
 
     <section id="driveway-patio">
         <h2>Drive & Patio Cleaning</h2>
-        <ul>
+        
             <li>Remove <strong style="color: #FFD700;">ingrained dirt, moss, algae, and black spots</strong>.</li>
             <li>Bring up surfaces <strong style="color: #FFD700;">like new</strong>. </li>
             <li> Including <strong style="color: #FFD700;">Block Paving, Patio Stone, Walls, Paths, Tarmac, Resin & more</strong>.
-        </ul>
+        
     
 
         <div class="slider">
