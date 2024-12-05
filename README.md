@@ -280,7 +280,7 @@
 
              <li> Gutter Vacuum Service </li>
              <li> <strong style="color: #FFD700;">Prevent expensive repairs</strong> caused by blockes, leaks and debris. </strong> .</li>
-            <li> UPVC Cleaning, including <strong style="color: #FFD700;">Soffits and Fascias</strong>. </li>
+            <li> UPVC Cleaning, including <strong style="color: #FFD700;">Soffits and Fascias. </li>
             <br>
             <br>
 
