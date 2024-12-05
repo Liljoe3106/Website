@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
@@ -100,7 +101,7 @@
         }
 
         /* Slider styles */
-        .slider, .gutter-slider, .review-slider {
+        .slider, .gutter-slider, .review-slider, .roof-slider {
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
@@ -222,6 +223,7 @@
         <ul>
             <li><a href="#driveway-patio">Drive & Patio Cleaning</a></li>
             <li><a href="#gutter-cleaning">Gutter Cleaning</a></li>
+            <li><a href="#roof-cleaning">Roof Cleaning</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -276,8 +278,19 @@
         <div class="gutter-slider">
             <div class="slides">
                 <img src="DP MEDIA/Free Gutter CHECK.png" alt="Free Gutter Check" loading="lazy">
-                 <img src="DP MEDIA/Gutter Clearing.png" alt="Gutter Clearing" loading="lazy">
+                <img src="DP MEDIA/Gutter Clearing.png" alt="Gutter Clearing" loading="lazy">
                 <img src="DP MEDIA/Gutter Cleaning Before After.png" alt="Gutter Cleaning Before After" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="roof-cleaning">
+        <h2>Roof Cleaning</h2>
+        <p>Restore the appearance and functionality of your roof with our professional cleaning services. Remove moss, algae, and other debris to enhance your home's curb appeal and prevent potential damage.</p>
+
+        <div class="roof-slider">
+            <div class="slides">
+                <img src="DP MEDIA/Roof treatment.png" alt="Roof treatment" loading="lazy">
             </div>
         </div>
     </section>
@@ -306,6 +319,11 @@
                 else slide.classList.add('hidden');
             });
 
+            document.querySelectorAll('.roof-slider .slides img').forEach((slide, index) => {
+                if (index === 0) slide.classList.remove('hidden');
+                else slide.classList.add('hidden');
+            });
+
             document.querySelectorAll('.review-bubble').forEach((review, index) => {
                 if (index === 0) review.classList.remove('hidden');
                 else review.classList.add('hidden');
@@ -313,11 +331,13 @@
 
             setInterval(showDrivewaySlides, 3000);
             setInterval(showGutterSlides, 3000);
+            setInterval(showRoofSlides, 3000);
             setInterval(showReviewSlides, 5000);
         });
 
         let drivewaySlideIndex = 0;
         let gutterSlideIndex = 0;
+        let roofSlideIndex = 0;
         let reviewIndex = 0;
 
         function showDrivewaySlides() {
@@ -333,6 +353,14 @@
             slides.forEach(slide => slide.classList.add('hidden'));
             gutterSlideIndex = (gutterSlideIndex + 1) % slides.length;
             slides[gutterSlideIndex].classList.remove('hidden');
+        }
+
+        function showRoofSlides() {
+            const slides = document.querySelectorAll('.roof-slider .slides img');
+            if (slides.length <= 1) return;
+            slides.forEach(slide => slide.classList.add('hidden'));
+            roofSlideIndex = (roofSlideIndex + 1) % slides.length;
+            slides[roofSlideIndex].classList.remove('hidden');
         }
 
         function showReviewSlides() {
