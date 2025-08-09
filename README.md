@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dimension Powerwash – Exterior Cleaning Specialists</title>
-  <meta name="description" content="Pressure washing, driveway & patio cleaning, roof cleaning, and gutter clearing in Sheffield, Rotherham, and Worksop. Book a free quote today." />
+  <meta name="description" content="Pressure washing, driveway and patio cleaning, roof cleaning, and gutter clearing in Sheffield, Rotherham, and Worksop. Book a free quote today." />
   <style>
     :root{
       --bg:#000;
@@ -24,11 +24,12 @@
     .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
     .hero{display:grid;gap:16px;align-items:center;justify-items:center;text-align:center}
     .hero h1{margin:0;font-size:clamp(1.8rem,3.2vw,2.4rem);color:var(--accent)}
-    .hero p{margin:4px 0 0;color:var(--text)}
+    .hero p{margin:4px 0 0}
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
     .btn{display:inline-block;padding:12px 18px;border-radius:8px;font-weight:700}
     .btn-primary{background:var(--accent);color:#000}
     .btn-outline{border:2px solid var(--accent)}
+    .subtle{color:var(--muted);font-size:.95rem}
 
     /* Sticky nav */
     nav{position:sticky;top:0;z-index:20;background:var(--accent)}
@@ -45,7 +46,7 @@
     /* Sections */
     section{padding:48px 0;border-top:1px solid #1f1f1f}
     h2{color:var(--accent);margin:0 0 12px;font-size:clamp(1.4rem,2.4vw,1.8rem)}
-    .lead{color:var(--text);max-width:850px}
+    .lead{max-width:850px}
     ul.clean{margin:12px 0 0;padding-left:18px}
     ul.clean li strong{color:var(--accent)}
 
@@ -101,11 +102,11 @@
   <header>
     <div class="container hero">
       <h1>Dimension Powerwash</h1>
-      <p class="subtle">Exterior Cleaning Specialists · Sheffield, Rotherham, Worksop</p>
+      <p class="subtle">Exterior Cleaning Specialists in Sheffield, Rotherham and Worksop</p>
       <div class="cta-row" role="group" aria-label="Primary actions">
         <a class="btn btn-primary" href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank" rel="noopener">Book a Free Quote</a>
         <a class="btn btn-outline" href="#contact">Contact Us</a>
-        <a class="btn btn-outline" href="tel:01144573009">Call 0114 457 3009</a>
+        <a class="btn btn-outline" href="tel:01144573009" aria-label="Call 0114 457 3009">Call 0114 457 3009</a>
       </div>
     </div>
   </header>
@@ -124,8 +125,143 @@
     </div>
   </nav>
 
-  <!-- Main content stays the same as before -->
-  <!-- Sliders, sections, and footer from previous version go here with no gradient changes -->
+  <main id="main">
+    <section id="about-us">
+      <div class="container">
+        <h2>About Us</h2>
+        <p class="lead">
+          We deliver high quality exterior cleaning across Sheffield and nearby areas. Services include
+          <strong>pressure washing</strong>, <strong>drive and patio cleaning</strong>, <strong>roof cleaning</strong>, and
+          <strong>gutter clearing and cleaning</strong>. We serve homes and businesses in <strong>Sheffield</strong>,
+          <strong>Rotherham</strong>, and <strong>Worksop</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section id="customer-reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 id="reviews-title">What Our Customers Say</h2>
+        <div class="review-grid">
+          <blockquote class="review" aria-label="Review from Clare">
+            <p>“Had gutters cleaned out. Three storey house and high gutters but Joe did a great job with the sky vac and was really nice to deal with.”</p>
+            <p><strong>Clare</strong> <span class="stars">★★★★★</span></p>
+          </blockquote>
+          <blockquote class="review" aria-label="Review from Peter">
+            <p>“Great communication and great job done. Gutters now clear of gunk. Thanks Joe.”</p>
+            <p><strong>Peter</strong> <span class="stars">★★★★★</span></p>
+          </blockquote>
+          <blockquote class="review" aria-label="Review from Sam">
+            <p>“Great service from Joe getting our driveway clean, looks amazing.”</p>
+            <p><strong>Sam</strong> <span class="stars">★★★★★</span></p>
+          </blockquote>
+          <blockquote class="review" aria-label="Review from M">
+            <p>“Excellent service with a fair price. Joe cleaned our gutters, driveway and patio. Highly recommend.”</p>
+            <p><strong>M</strong> <span class="stars">★★★★★</span></p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="driveway-patio" aria-labelledby="driveway-title">
+      <div class="container">
+        <h2 id="driveway-title">Drive and Patio Cleaning</h2>
+        <ul class="clean">
+          <li>Remove <strong>ingrained dirt, moss, algae and black spots</strong></li>
+          <li>Bring up surfaces <strong>like new</strong></li>
+          <li>Block paving, patio stone, walls, paths, tarmac, resin and more</li>
+        </ul>
+
+        <div class="slider" data-slider="driveway" aria-label="Drive and patio before and after photos" tabindex="0">
+          <div class="slides">
+            <figure class="slide">
+              <img src="dp-media/block-paving-before-after.png" alt="Block paving before and after cleaning" loading="lazy">
+            </figure>
+            <figure class="slide">
+              <img src="dp-media/patio-before-after.png" alt="Patio before and after cleaning" loading="lazy">
+            </figure>
+            <figure class="slide">
+              <img src="dp-media/path-before-after.png" alt="Path before and after cleaning" loading="lazy">
+            </figure>
+          </div>
+          <div class="slider-controls" aria-label="Drive and patio controls">
+            <button class="slider-btn prev" data-prev type="button">Prev</button>
+            <div class="dots" data-dots></div>
+            <button class="slider-btn next" data-next type="button">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gutter-cleaning" aria-labelledby="gutter-title">
+      <div class="container">
+        <h2 id="gutter-title">Gutter Cleaning</h2>
+        <ul class="clean">
+          <li>Gutter vacuum service</li>
+          <li><strong>Prevent expensive repairs</strong> from blockages and leaks</li>
+          <li>uPVC cleaning, including <strong>soffits and fascias</strong></li>
+        </ul>
+
+        <div class="slider" data-slider="gutter" aria-label="Gutter cleaning images" tabindex="0">
+          <div class="slides">
+            <figure class="slide">
+              <img src="dp-media/free-gutter-check.png" alt="Free gutter check image" loading="lazy">
+            </figure>
+            <figure class="slide">
+              <img src="dp-media/gutter-clearing.png" alt="Gutter clearing with vacuum system" loading="lazy">
+            </figure>
+            <figure class="slide">
+              <img src="dp-media/gutter-cleaning-before-after.png" alt="Gutter cleaning before and after" loading="lazy">
+            </figure>
+          </div>
+          <div class="slider-controls" aria-label="Gutter controls">
+            <button class="slider-btn prev" data-prev type="button">Prev</button>
+            <div class="dots" data-dots></div>
+            <button class="slider-btn next" data-next type="button">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roof-cleaning" aria-labelledby="roof-title">
+      <div class="container">
+        <h2 id="roof-title">Roof Cleaning</h2>
+        <ul class="clean">
+          <li>Moss clogs gutters and attracts birds</li>
+          <li>Moss removal and <strong>roof treatment</strong></li>
+          <li><strong>Softwashing</strong> is less invasive than pressure washing</li>
+          <li>We also do <strong>conservatory roof cleaning</strong></li>
+        </ul>
+
+        <div class="slider" data-slider="roof" aria-label="Roof treatment and conservatory roof photos" tabindex="0">
+          <div class="slides">
+            <figure class="slide">
+              <img src="dp-media/roof-treatment.png" alt="Roof treatment in progress" loading="lazy">
+            </figure>
+            <figure class="slide">
+              <img src="dp-media/con-roof-before-after.png" alt="Conservatory roof before and after cleaning" loading="lazy">
+            </figure>
+          </div>
+          <div class="slider-controls" aria-label="Roof controls">
+            <button class="slider-btn prev" data-prev type="button">Prev</button>
+            <div class="dots" data-dots></div>
+            <button class="slider-btn next" data-next type="button">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h3 id="contact-title">Contact Us</h3>
+      <p><a href="https://calendly.com/dimensionpowerwash/free-quote" target="_blank" rel="noopener">Get your free gutter check or book a free quote</a></p>
+      <p>Call us: <a href="tel:01144573009">0114 457 3009</a> · <a href="tel:07494503865">07494 503 865</a></p>
+      <p>Follow us on <a href="https://facebook.com/dimensionpowerwash" target="_blank" rel="noopener">Facebook</a></p>
+      <p class="subtle">© <span id="year"></span> Dimension Powerwash</p>
+    </div>
+  </footer>
+
+  <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
 
   <script>
     // Year
@@ -153,6 +289,8 @@
       const dotsWrap = slider.querySelector('[data-dots]');
 
       let index = 0;
+
+      // Dots
       slides.forEach((_,i)=>{
         const dot = document.createElement('button');
         dot.className = 'dot';
@@ -168,18 +306,24 @@
       }
       function go(i){ index = (i+slides.length) % slides.length; update(); }
 
+      // Buttons
       prev.addEventListener('click', ()=>go(index-1));
       next.addEventListener('click', ()=>go(index+1));
 
+      // Keyboard
       slider.addEventListener('keydown', e=>{
         if(e.key==='ArrowLeft') go(index-1);
         if(e.key==='ArrowRight') go(index+1);
       });
 
+      // Auto advance with pause on hover and focus
       let timer = setInterval(()=>go(index+1), 4000);
       slider.addEventListener('mouseenter', ()=>clearInterval(timer));
       slider.addEventListener('mouseleave', ()=>timer = setInterval(()=>go(index+1), 4000));
+      slider.addEventListener('focusin', ()=>clearInterval(timer));
+      slider.addEventListener('focusout', ()=>timer = setInterval(()=>go(index+1), 4000));
 
+      // Touch swipe
       let startX = null;
       slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
       slider.addEventListener('touchend', e => {
